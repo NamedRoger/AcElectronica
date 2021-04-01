@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Fotos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DatabasaeManager\DatabasaeManager.csproj" />
+    <ProjectReference Include="..\LoginLib\Componentes.csproj" />
+  </ItemGroup>
+
+</Project>
