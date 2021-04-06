@@ -1,8 +1,12 @@
-using System;
+    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DatabasaeManager;
+using DatabasaeManager.Entidades;
+using Infrastructure;
+using Microsoft.Extensions. DependencyInjection;
 
 namespace AcUsuarios
 {
@@ -17,7 +21,24 @@ namespace AcUsuarios
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Usuarios());
+
+            var services = new ServiceCollection();
+            ConfigureServices(services);
+
+            using ServiceProvider serviceProvider = services.BuildServiceProvider();
+            FormUsuario formUsuario = serviceProvider.GetRequiredService<FormUsuario>();
+            Usuarios usuarios = serviceProvider.GetRequiredService<Usuarios>();
+            UserMediator mediator = new UserMediator(formUsuario, usuarios);
+            Application.Run(usuarios);
         }
+
+        static void ConfigureServices(ServiceCollection services)
+        {
+            services.AddDbContext<DataContext>();
+            services.AddScoped<FormUsuario>();
+            services.AddScoped<Usuarios>();
+            services.AddSingleton<IRepoUsuario<Usuario>,RepoUsuario>();
+        }
+
     }
 }

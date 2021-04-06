@@ -9,5 +9,20 @@ namespace LoginLib
         {
             InitializeComponent();
         }
+
+        public void AddButtonAgregar(EventHandler eventHandler)
+        {
+            this.btnAgregar.Click += eventHandler;
+        }
+
+        public void AddButtonEditar(EventHandler eventHandler)
+        {
+            this.btnEditar.Click += eventHandler;
+        }
+
+        public void AddButtonEliminar(EventHandler eventHandler)
+        {
+            this.btnBorrar.Click += eventHandler;
+        }
     }
 }

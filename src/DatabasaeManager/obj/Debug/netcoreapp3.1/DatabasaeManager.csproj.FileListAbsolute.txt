@@ -9,3 +9,4 @@ C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\obj\Debug\netcoreapp3.
 C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\obj\Debug\netcoreapp3.1\DatabasaeManager.dll
 C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\obj\Debug\netcoreapp3.1\DatabasaeManager.pdb
 C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\obj\Debug\netcoreapp3.1\DatabasaeManager.genruntimeconfig.cache
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\obj\Debug\netcoreapp3.1\DatabasaeManager.csprojAssemblyReference.cache

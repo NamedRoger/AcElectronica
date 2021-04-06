@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace DatabasaeManager.Entidades
 {
     public class Usuario
     {
+        [Key]
+        public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Direccion { get; set; }
@@ -17,5 +20,6 @@ namespace DatabasaeManager.Entidades
         public DateTime FechaAlta { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public string Foto { get; set; }
+        public bool Activo { get; set; } = true;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace AcUsuarios
 {
     public partial class FormUsuario : Form
     {
+        private Mediator mediator;
+
         public FormUsuario()
         {
             InitializeComponent();
@@ -19,6 +22,20 @@ namespace AcUsuarios
 
         private void navbar1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        public void SetMediator(Mediator mediator)
+        {
+            this.mediator = mediator;
+        }
+
+       
+        private void FormUsuario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+            this.mediator.Notificar(sender, "formularioCierre");
 
         }
     }

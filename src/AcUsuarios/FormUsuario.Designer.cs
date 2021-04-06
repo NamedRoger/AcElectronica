@@ -93,7 +93,6 @@ namespace AcUsuarios
             // 
             // txtNoInfo
             // 
-            this.txtNoInfo.Enabled = false;
             this.txtNoInfo.Location = new System.Drawing.Point(416, 99);
             this.txtNoInfo.Name = "txtNoInfo";
             this.txtNoInfo.Size = new System.Drawing.Size(179, 23);
@@ -101,7 +100,6 @@ namespace AcUsuarios
             // 
             // txtNss
             // 
-            this.txtNss.Enabled = false;
             this.txtNss.Location = new System.Drawing.Point(92, 99);
             this.txtNss.Name = "txtNss";
             this.txtNss.Size = new System.Drawing.Size(193, 23);
@@ -109,7 +107,6 @@ namespace AcUsuarios
             // 
             // txtCurp
             // 
-            this.txtCurp.Enabled = false;
             this.txtCurp.Location = new System.Drawing.Point(464, 70);
             this.txtCurp.Name = "txtCurp";
             this.txtCurp.Size = new System.Drawing.Size(131, 23);
@@ -117,7 +114,6 @@ namespace AcUsuarios
             // 
             // txtCelular
             // 
-            this.txtCelular.Enabled = false;
             this.txtCelular.Location = new System.Drawing.Point(279, 70);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(131, 23);
@@ -169,7 +165,6 @@ namespace AcUsuarios
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Enabled = false;
             this.txtTelefono.Location = new System.Drawing.Point(92, 70);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(131, 23);
@@ -186,7 +181,6 @@ namespace AcUsuarios
             // 
             // txtAddress
             // 
-            this.txtAddress.Enabled = false;
             this.txtAddress.Location = new System.Drawing.Point(92, 41);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(503, 23);
@@ -203,7 +197,6 @@ namespace AcUsuarios
             // 
             // txtPassword
             // 
-            this.txtPassword.Enabled = false;
             this.txtPassword.Location = new System.Drawing.Point(390, 12);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(205, 23);
@@ -220,7 +213,6 @@ namespace AcUsuarios
             // 
             // txtUserName
             // 
-            this.txtUserName.Enabled = false;
             this.txtUserName.Location = new System.Drawing.Point(92, 12);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(205, 23);
@@ -273,6 +265,7 @@ namespace AcUsuarios
             this.Controls.Add(this.label1);
             this.Name = "FormUsuario";
             this.Text = "FormUsuario";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUsuario_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
