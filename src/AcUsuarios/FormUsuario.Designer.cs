@@ -51,7 +51,16 @@ namespace AcUsuarios
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.chxVentas = new System.Windows.Forms.CheckBox();
+            this.chxInsumos = new System.Windows.Forms.CheckBox();
+            this.cbxAlmacen = new System.Windows.Forms.CheckBox();
+            this.cbxClientes = new System.Windows.Forms.CheckBox();
+            this.cbxProveedores = new System.Windows.Forms.CheckBox();
+            this.cbxUsuarios = new System.Windows.Forms.CheckBox();
+            this.btnFoto = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtFoto = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -235,12 +244,117 @@ namespace AcUsuarios
             this.btnGuardar.TabIndex = 50;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(19, -11);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 23);
+            this.txtId.TabIndex = 51;
+            this.txtId.Visible = false;
+            // 
+            // chxVentas
+            // 
+            this.chxVentas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chxVentas.AutoSize = true;
+            this.chxVentas.Location = new System.Drawing.Point(422, 181);
+            this.chxVentas.Name = "chxVentas";
+            this.chxVentas.Size = new System.Drawing.Size(60, 19);
+            this.chxVentas.TabIndex = 67;
+            this.chxVentas.Text = "Ventas";
+            this.chxVentas.UseVisualStyleBackColor = true;
+            // 
+            // chxInsumos
+            // 
+            this.chxInsumos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chxInsumos.AutoSize = true;
+            this.chxInsumos.Location = new System.Drawing.Point(345, 180);
+            this.chxInsumos.Name = "chxInsumos";
+            this.chxInsumos.Size = new System.Drawing.Size(71, 19);
+            this.chxInsumos.TabIndex = 66;
+            this.chxInsumos.Text = "Insumos";
+            this.chxInsumos.UseVisualStyleBackColor = true;
+            // 
+            // cbxAlmacen
+            // 
+            this.cbxAlmacen.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxAlmacen.AutoSize = true;
+            this.cbxAlmacen.Location = new System.Drawing.Point(266, 181);
+            this.cbxAlmacen.Name = "cbxAlmacen";
+            this.cbxAlmacen.Size = new System.Drawing.Size(73, 19);
+            this.cbxAlmacen.TabIndex = 65;
+            this.cbxAlmacen.Text = "Almacen";
+            this.cbxAlmacen.UseVisualStyleBackColor = true;
+            // 
+            // cbxClientes
+            // 
+            this.cbxClientes.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxClientes.AutoSize = true;
+            this.cbxClientes.Location = new System.Drawing.Point(192, 181);
+            this.cbxClientes.Name = "cbxClientes";
+            this.cbxClientes.Size = new System.Drawing.Size(68, 19);
+            this.cbxClientes.TabIndex = 64;
+            this.cbxClientes.Text = "Clientes";
+            this.cbxClientes.UseVisualStyleBackColor = true;
+            // 
+            // cbxProveedores
+            // 
+            this.cbxProveedores.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxProveedores.AutoSize = true;
+            this.cbxProveedores.Location = new System.Drawing.Point(95, 181);
+            this.cbxProveedores.Name = "cbxProveedores";
+            this.cbxProveedores.Size = new System.Drawing.Size(91, 19);
+            this.cbxProveedores.TabIndex = 63;
+            this.cbxProveedores.Text = "Proveedores";
+            this.cbxProveedores.UseVisualStyleBackColor = true;
+            // 
+            // cbxUsuarios
+            // 
+            this.cbxUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbxUsuarios.AutoSize = true;
+            this.cbxUsuarios.Location = new System.Drawing.Point(18, 181);
+            this.cbxUsuarios.Name = "cbxUsuarios";
+            this.cbxUsuarios.Size = new System.Drawing.Size(71, 19);
+            this.cbxUsuarios.TabIndex = 62;
+            this.cbxUsuarios.Text = "Usuarios";
+            this.cbxUsuarios.UseVisualStyleBackColor = true;
+            // 
+            // btnFoto
+            // 
+            this.btnFoto.Location = new System.Drawing.Point(696, 166);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(75, 23);
+            this.btnFoto.TabIndex = 68;
+            this.btnFoto.Text = "Files";
+            this.btnFoto.UseVisualStyleBackColor = true;
+            this.btnFoto.Click += new System.EventHandler(this.bus_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // txtFoto
+            // 
+            this.txtFoto.Location = new System.Drawing.Point(685, 195);
+            this.txtFoto.Name = "txtFoto";
+            this.txtFoto.Size = new System.Drawing.Size(100, 23);
+            this.txtFoto.TabIndex = 69;
             // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 256);
+            this.Controls.Add(this.txtFoto);
+            this.Controls.Add(this.btnFoto);
+            this.Controls.Add(this.chxVentas);
+            this.Controls.Add(this.chxInsumos);
+            this.Controls.Add(this.cbxAlmacen);
+            this.Controls.Add(this.cbxClientes);
+            this.Controls.Add(this.cbxProveedores);
+            this.Controls.Add(this.cbxUsuarios);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtFechaAlta);
@@ -296,6 +410,15 @@ namespace AcUsuarios
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.CheckBox chxVentas;
+        private System.Windows.Forms.CheckBox chxInsumos;
+        private System.Windows.Forms.CheckBox cbxAlmacen;
+        private System.Windows.Forms.CheckBox cbxClientes;
+        private System.Windows.Forms.CheckBox cbxProveedores;
+        private System.Windows.Forms.CheckBox cbxUsuarios;
+        private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox txtFoto;
     }
 }

@@ -10,7 +10,7 @@ namespace Infrastructure
         Task<IEnumerable<TEndidad>> GetAll();
         Task<TEndidad> Get(TKey key);
         Task Add(TEndidad endidad);
-        Task Update();
-        Task Delete();
+        Task Update(TKey key, TEndidad endidad);
+        Task Delete(TKey key);
     }
 }

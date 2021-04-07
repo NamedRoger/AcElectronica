@@ -31,6 +31,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.navbar1 = new LoginLib.Navbar();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chxVentas = new System.Windows.Forms.CheckBox();
+            this.chxInsumos = new System.Windows.Forms.CheckBox();
             this.cbxAlmacen = new System.Windows.Forms.CheckBox();
             this.cbxClientes = new System.Windows.Forms.CheckBox();
             this.cbxProveedores = new System.Windows.Forms.CheckBox();
@@ -85,6 +87,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.chxVentas);
+            this.panel1.Controls.Add(this.chxInsumos);
             this.panel1.Controls.Add(this.cbxAlmacen);
             this.panel1.Controls.Add(this.cbxClientes);
             this.panel1.Controls.Add(this.cbxProveedores);
@@ -115,12 +119,36 @@
             this.panel1.Size = new System.Drawing.Size(1070, 213);
             this.panel1.TabIndex = 31;
             // 
+            // chxVentas
+            // 
+            this.chxVentas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chxVentas.AutoSize = true;
+            this.chxVentas.Enabled = false;
+            this.chxVentas.Location = new System.Drawing.Point(546, 179);
+            this.chxVentas.Name = "chxVentas";
+            this.chxVentas.Size = new System.Drawing.Size(60, 19);
+            this.chxVentas.TabIndex = 61;
+            this.chxVentas.Text = "Ventas";
+            this.chxVentas.UseVisualStyleBackColor = true;
+            // 
+            // chxInsumos
+            // 
+            this.chxInsumos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chxInsumos.AutoSize = true;
+            this.chxInsumos.Enabled = false;
+            this.chxInsumos.Location = new System.Drawing.Point(469, 178);
+            this.chxInsumos.Name = "chxInsumos";
+            this.chxInsumos.Size = new System.Drawing.Size(71, 19);
+            this.chxInsumos.TabIndex = 60;
+            this.chxInsumos.Text = "Insumos";
+            this.chxInsumos.UseVisualStyleBackColor = true;
+            // 
             // cbxAlmacen
             // 
             this.cbxAlmacen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxAlmacen.AutoSize = true;
             this.cbxAlmacen.Enabled = false;
-            this.cbxAlmacen.Location = new System.Drawing.Point(402, 179);
+            this.cbxAlmacen.Location = new System.Drawing.Point(390, 179);
             this.cbxAlmacen.Name = "cbxAlmacen";
             this.cbxAlmacen.Size = new System.Drawing.Size(73, 19);
             this.cbxAlmacen.TabIndex = 59;
@@ -132,7 +160,7 @@
             this.cbxClientes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxClientes.AutoSize = true;
             this.cbxClientes.Enabled = false;
-            this.cbxClientes.Location = new System.Drawing.Point(328, 179);
+            this.cbxClientes.Location = new System.Drawing.Point(316, 179);
             this.cbxClientes.Name = "cbxClientes";
             this.cbxClientes.Size = new System.Drawing.Size(68, 19);
             this.cbxClientes.TabIndex = 58;
@@ -144,7 +172,7 @@
             this.cbxProveedores.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxProveedores.AutoSize = true;
             this.cbxProveedores.Enabled = false;
-            this.cbxProveedores.Location = new System.Drawing.Point(231, 179);
+            this.cbxProveedores.Location = new System.Drawing.Point(219, 179);
             this.cbxProveedores.Name = "cbxProveedores";
             this.cbxProveedores.Size = new System.Drawing.Size(91, 19);
             this.cbxProveedores.TabIndex = 57;
@@ -469,6 +497,8 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView tablaUsuarios;
+        private System.Windows.Forms.CheckBox chxInsumos;
+        private System.Windows.Forms.CheckBox chxVentas;
     }
 }
 

@@ -9,5 +9,6 @@ namespace AcUsuarios
 {
     public interface IRepoUsuario<TEntidad> : IRepo<TEntidad,int>
     {
+        Task<bool> HasApplication(int idUsuario,string app);
     }
 }

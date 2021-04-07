@@ -21,5 +21,7 @@ namespace DatabasaeManager.Entidades
         public DateTime FechaNacimiento { get; set; }
         public string Foto { get; set; }
         public bool Activo { get; set; } = true;
+
+        public ICollection<Aplicacion> Aplicaciones { get; set; }
     }
 }

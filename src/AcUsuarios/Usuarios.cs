@@ -32,12 +32,11 @@ namespace AcUsuarios
             this._repo = repoUsuario;
             InitializeComponent();
             LoadTable().Wait();
-            loadButtons();
         }
 
         private void navbar1_Load(object sender, EventArgs e)
         {
-
+            loadButtons();
         }
 
         private void loadButtons()
@@ -45,18 +44,32 @@ namespace AcUsuarios
             navbar1.AddButtonAgregar((s, e) =>
             {
                 SelectedUsuario = new Usuario();
-                this._mediator.Notificar(s, "openAddUser");
+                this._mediator.Notificar(s, "openForm");
             });
 
             navbar1.AddButtonEditar((s, e) =>
             {
                 if (_usuario == null) ShowAlert("No ha seleccionado ningun usuario", "Error");
-                else this._mediator.Notificar(s, "openEditUser");
+                else this._mediator.Notificar(s, "openForm");
             });
 
             navbar1.AddButtonEliminar((s, e) =>
             {
                 if (_usuario == null) ShowAlert("No ha seleccionado ningun usuario", "Error");
+                else
+                {
+                    try
+                    {
+                        this.DeleteUser(_usuario.Id).Wait();
+                        this.ResetForm();
+                        this.LoadTable().Wait();
+                    }
+                    catch (Exception exe)
+                    {
+                        ShowAlert(exe.Message, "Error");
+                    }
+                }
+              
             });
         }
 
@@ -66,10 +79,7 @@ namespace AcUsuarios
         }
 
 
-        public void SetMediator(Mediator mediator)
-        {
-            this._mediator = mediator;
-        }
+        public void SetMediator(Mediator mediator) => this._mediator = mediator;
 
         public async Task LoadTable()
         {
@@ -85,23 +95,19 @@ namespace AcUsuarios
                 var row = this.tablaUsuarios.Rows[e.RowIndex];
                 int idUser = (int)row.Cells["Id"].Value;
                 SelectedUsuario = FindUser(idUser).Result;
-                loadForm();
+                LoadForm().Wait();
             }
         }
 
-        private async Task<Usuario> FindUser(int id)
-        {
-            var usuario = await this._repo.Get(id);
-            return usuario;
-        }
+        private async Task<Usuario> FindUser(int id) => await this._repo.Get(id);
 
-        public void resetForm()
+        public void ResetForm()
         {
             SelectedUsuario = null;
-            loadForm();
+            LoadForm().Wait();
         }
 
-        public void loadForm()
+        public async Task LoadForm()
         {
             txtAddress.Text = SelectedUsuario != null ? SelectedUsuario.Direccion : "";
             txtCelular.Text = SelectedUsuario == null ? "" : SelectedUsuario.Celular;
@@ -113,7 +119,20 @@ namespace AcUsuarios
             txtPassword.Text = SelectedUsuario == null ? "" : SelectedUsuario.Password;
             txtTelefono.Text = SelectedUsuario == null ? "" : SelectedUsuario.Telefono;
             txtUserName.Text = SelectedUsuario == null ? "" : SelectedUsuario.Username;
+
+            pictureBox1.Image = SelectedUsuario == null ? 
+                null : 
+                (string.IsNullOrEmpty(SelectedUsuario.Foto))? null:new Bitmap(SelectedUsuario.Foto);
+
+            cbxUsuarios.Checked = SelectedUsuario == null ? false : await _repo.HasApplication(this.SelectedUsuario.Id,"usuarios");
+            cbxProveedores.Checked = SelectedUsuario == null ? false : await _repo.HasApplication(this.SelectedUsuario.Id,"proveedores");
+            cbxClientes.Checked = SelectedUsuario == null ? false : await _repo.HasApplication(this.SelectedUsuario.Id,"clientes");
+            cbxAlmacen.Checked = SelectedUsuario == null ? false : await _repo.HasApplication(this.SelectedUsuario.Id,"almacen");
+            chxInsumos.Checked = SelectedUsuario == null ? false : await _repo.HasApplication(this.SelectedUsuario.Id,"insumos");
+            chxVentas.Checked = SelectedUsuario == null ? false : await _repo.HasApplication(this.SelectedUsuario.Id,"ventas");
         }
+
+        public async Task DeleteUser(int id) => await this._repo.Delete(id);
     }
 
 }
