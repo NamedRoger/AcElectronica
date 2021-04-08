@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\LoginLib\\Componentes.csproj": {}
+    "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\LoginLib\\Componentes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\LoginLib\\Componentes.csproj": {
+    "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\LoginLib\\Componentes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\LoginLib\\Componentes.csproj",
+        "projectUniqueName": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\LoginLib\\Componentes.csproj",
         "projectName": "Componentes",
-        "projectPath": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\LoginLib\\Componentes.csproj",
-        "packagesPath": "C:\\Users\\rogev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\LoginLib\\obj\\",
+        "projectPath": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\LoginLib\\Componentes.csproj",
+        "packagesPath": "C:\\Users\\Rogelio Villarreal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\LoginLib\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\rogev\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Rogelio Villarreal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0-windows"
@@ -58,11 +63,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
         }
       }
     }
