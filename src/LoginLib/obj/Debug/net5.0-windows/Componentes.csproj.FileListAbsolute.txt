@@ -12,3 +12,4 @@ C:\Users\rogev\Desktop\AcElectronica\src\LoginLib\obj\Debug\net5.0-windows\Compo
 C:\Users\rogev\Desktop\AcElectronica\src\LoginLib\obj\Debug\net5.0-windows\ref\Componentes.dll
 C:\Users\rogev\Desktop\AcElectronica\src\LoginLib\obj\Debug\net5.0-windows\Componentes.pdb
 C:\Users\rogev\Desktop\AcElectronica\src\LoginLib\obj\Debug\net5.0-windows\Componentes.csprojAssemblyReference.cache
+C:\Users\rogev\Desktop\AcElectronica\src\LoginLib\obj\Debug\net5.0-windows\Componentes.Properties.Resources.resources
