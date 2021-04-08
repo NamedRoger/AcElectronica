@@ -47,7 +47,7 @@ namespace AcUsuarios
                     break;
                 case "openForm":
                     this._formUsuario.Show();
-                    if (this._componentUsers.SelectedUsuario.Id != 0) 
+                    if (this._componentUsers.SelectedUsuario != null) 
                         this._formUsuario.LoadForm(this._componentUsers.SelectedUsuario.Id).Wait();
                     break;
             }

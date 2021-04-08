@@ -75,7 +75,6 @@ namespace AcUsuarios
             // txtFechaAlta
             // 
             this.txtFechaAlta.CustomFormat = "";
-            this.txtFechaAlta.Enabled = false;
             this.txtFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtFechaAlta.Location = new System.Drawing.Point(395, 137);
             this.txtFechaAlta.Name = "txtFechaAlta";
@@ -84,7 +83,6 @@ namespace AcUsuarios
             // 
             // txtFechaNacimiento
             // 
-            this.txtFechaNacimiento.Enabled = false;
             this.txtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtFechaNacimiento.Location = new System.Drawing.Point(95, 137);
             this.txtFechaNacimiento.Name = "txtFechaNacimiento";
@@ -216,9 +214,9 @@ namespace AcUsuarios
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(317, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
+            this.label2.Size = new System.Drawing.Size(72, 15);
             this.label2.TabIndex = 31;
-            this.label2.Text = "Contraseña";
+            this.label2.Text = "Contraseña*";
             // 
             // txtUserName
             // 
@@ -232,9 +230,9 @@ namespace AcUsuarios
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 15);
+            this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 29;
-            this.label1.Text = "Usuario";
+            this.label1.Text = "Usuario*";
             // 
             // btnGuardar
             // 
@@ -340,6 +338,7 @@ namespace AcUsuarios
             this.txtFoto.Name = "txtFoto";
             this.txtFoto.Size = new System.Drawing.Size(100, 23);
             this.txtFoto.TabIndex = 69;
+            this.txtFoto.Visible = false;
             // 
             // FormUsuario
             // 

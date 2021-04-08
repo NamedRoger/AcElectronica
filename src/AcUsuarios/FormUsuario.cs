@@ -50,13 +50,18 @@ namespace AcUsuarios
             {
                 if (usuario.Id == 0)
                 {
-                    usuario.Foto = SaveFotoUser();
-                    this._repo.Add(usuario).Wait();
+                    if (!ValidateForm()) throw new Exception("Favor de rellenar los campos requeridos");
+                    if(!string.IsNullOrEmpty(txtFoto.Text))
+                        usuario.Foto = SaveFotoUser();
+
+                   this._repo.Add(usuario).Wait();
                     this.Close();
                 }
                 else
                 {
                     usuario = _repo.Get(usuario.Id).Result;
+                    usuario.Foto = SaveFotoUser();
+                    this._repo.Update(usuario.Id,usuario);
                     usuario.Aplicaciones.Clear();
                 }
             }
@@ -100,7 +105,20 @@ namespace AcUsuarios
             txtPassword.Text = usuario == null ? "" : usuario.Password;
             txtTelefono.Text = usuario == null ? "" : usuario.Telefono;
             txtUserName.Text = usuario == null ? "" : usuario.Username;
+
+            pictureBox1.Image = usuario == null ?
+              null :
+              (string.IsNullOrEmpty(usuario.Foto)) ? null : new Bitmap(usuario.Foto);
         }
+
+        public bool ValidateForm()
+        {
+            if (string.IsNullOrEmpty(txtUserName.Text.Trim())) return false;
+            if (string.IsNullOrEmpty(txtPassword.Text.Trim())) return false;
+
+            return true;
+        }
+
 
         private Usuario GetUsuario() => new Usuario
         {

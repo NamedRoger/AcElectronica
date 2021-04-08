@@ -24,5 +24,15 @@ namespace LoginLib
         {
             this.btnBorrar.Click += eventHandler;
         }
+
+        public string GetFilterText()
+        {
+            return this.txtBuscar.Text;
+        }
+
+        public void AddTextFilter(EventHandler eventHandler)
+        {
+            this.btnBuscar.Click += eventHandler;
+        }
     }
 }

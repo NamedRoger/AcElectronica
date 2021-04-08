@@ -46,6 +46,128 @@ namespace DatabasaeManager.Migrations
                     b.ToTable("Aplicaciones");
                 });
 
+            modelBuilder.Entity("DatabasaeManager.Entidades.Proveedor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Activo")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("ApodoProveedor")
+                        .HasColumnType("varchar(767)");
+
+                    b.Property<string>("Banco")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Banco2")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Banco3")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Celular")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Ciudad")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ClaveBancaria")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ClaveBancaria2")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ClaveBancaria3")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Cp")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CuentaBancaria")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CuentaBancaria2")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CuentaBancaria3")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Domicilio")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Estado")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("FechaAlta")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("Notas")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Pais")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Paqueteria")
+                        .HasColumnType("text");
+
+                    b.Property<string>("RazonSocial")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Representante")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("RepresentanteCelular")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("RepresentanteCiudad")
+                        .HasColumnType("text");
+
+                    b.Property<string>("RepresentanteDomicilio")
+                        .HasColumnType("text");
+
+                    b.Property<string>("RepresentanteEmail")
+                        .HasColumnType("text");
+
+                    b.Property<string>("RepresentanteEstado")
+                        .HasColumnType("text");
+
+                    b.Property<string>("RepresentantePais")
+                        .HasColumnType("text");
+
+                    b.Property<string>("RepresentanteTelefeono")
+                        .HasColumnType("text");
+
+                    b.Property<string>("RepresentatneCp")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Rfc")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Telefono")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("UltimaCompra")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApodoProveedor")
+                        .IsUnique();
+
+                    b.ToTable("Proveedores");
+                });
+
             modelBuilder.Entity("DatabasaeManager.Entidades.Usuario", b =>
                 {
                     b.Property<int>("Id")

@@ -43,7 +43,7 @@ namespace AcUsuarios
         {
             navbar1.AddButtonAgregar((s, e) =>
             {
-                SelectedUsuario = new Usuario();
+                SelectedUsuario = null;
                 this._mediator.Notificar(s, "openForm");
             });
 
@@ -71,6 +71,12 @@ namespace AcUsuarios
                 }
               
             });
+
+            navbar1.AddTextFilter((s,e) => {
+                SelectedUsuario = null;
+                ResetForm();
+                LoadTable(this.navbar1.GetFilterText()).Wait();
+            });
         }
 
         private void ShowAlert(string text, string caption = "")
@@ -81,9 +87,11 @@ namespace AcUsuarios
 
         public void SetMediator(Mediator mediator) => this._mediator = mediator;
 
-        public async Task LoadTable()
+        public async Task LoadTable(string filter = "")
         {
-            var usuarios = (await this._repo.GetAll()).Select(u => new UsuarioTabla { Id = u.Id, Usuario = u.Username }).ToList();
+            var usuarios = (await this._repo.GetAll()).Where(u => u.Username.ToUpper().Contains(filter.ToUpper()))
+                .Select(u => new UsuarioTabla { Id = u.Id, Usuario = u.Username }).ToList();
+
             this.tablaUsuarios.DataSource = usuarios.Count() == 0 ? new List<UsuarioTabla>() : usuarios;
         }
 
@@ -132,6 +140,7 @@ namespace AcUsuarios
             chxVentas.Checked = SelectedUsuario == null ? false : await _repo.HasApplication(this.SelectedUsuario.Id,"ventas");
         }
 
+       
         public async Task DeleteUser(int id) => await this._repo.Delete(id);
     }
 
