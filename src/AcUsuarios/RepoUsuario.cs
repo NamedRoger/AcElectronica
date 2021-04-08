@@ -41,9 +41,20 @@ namespace AcUsuarios
             await _context.SaveChangesAsync();
         }
 
-        public Task Update(int id, Usuario usuario)
+        public async Task Update(int id, Usuario usuario)
         {
-            throw new NotImplementedException();
+            var oldUser = await Get(id);
+            oldUser.Celular = usuario.Celular;
+            oldUser.Curp = usuario.Curp;
+            oldUser.Direccion = usuario.Direccion;
+            oldUser.Foto = usuario.Foto;
+            oldUser.Nss = usuario.Nss;
+            oldUser.NumeroInfonavit = usuario.NumeroInfonavit;
+            oldUser.Password = usuario.Password;
+            oldUser.Telefono = usuario.Telefono;
+            oldUser.Username = usuario.Username;
+
+            await _context.SaveChangesAsync();
         }
 
         public async Task Delete(int id)
@@ -53,12 +64,43 @@ namespace AcUsuarios
             await this._context.SaveChangesAsync();
         }
 
-        public async Task<bool> HasApplication(int idUsuario,string app)
+        public async Task<bool> HasApplication(int idUsuario, string app)
         {
             var usuario = await this.Get(idUsuario);
             if (usuario.Aplicaciones.Count == 0) return false;
             var has = usuario.Aplicaciones.FirstOrDefault(a => a.Nombre.ToUpper().Trim() == app.ToUpper());
             return has != null;
         }
+
+        public async Task AddApp(int idUser,string app)
+        {
+            var usuario = await Get(idUser);
+            if (!await HasApplication(idUser,app))
+            {
+                var newApp = await _context.Aplicaciones.FirstOrDefaultAsync(a => a.Nombre.ToUpper() == app.ToUpper());
+                if (newApp != null)
+                {
+                    usuario.Aplicaciones.Add(newApp);
+                    await _context.SaveChangesAsync();
+                }
+               
+            }
+        }
+
+        public async Task RemoveApp(int idUser,string app)
+        {
+            var usuario = await Get(idUser);
+            if (await HasApplication(idUser, app))
+            {
+                var newApp = await _context.Aplicaciones.FirstOrDefaultAsync(a => a.Nombre.ToUpper() == app.ToUpper());
+                if (newApp != null)
+                {
+                    usuario.Aplicaciones.Remove(newApp);
+                    await _context.SaveChangesAsync();
+                }
+                
+            }
+        }
+
     }
 }

@@ -255,6 +255,7 @@ namespace AcUsuarios
             // 
             // chxVentas
             // 
+            this.chxVentas.AccessibleName = "ventas";
             this.chxVentas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chxVentas.AutoSize = true;
             this.chxVentas.Location = new System.Drawing.Point(422, 181);
@@ -266,6 +267,7 @@ namespace AcUsuarios
             // 
             // chxInsumos
             // 
+            this.chxInsumos.AccessibleName = "insumos";
             this.chxInsumos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chxInsumos.AutoSize = true;
             this.chxInsumos.Location = new System.Drawing.Point(345, 180);
@@ -277,6 +279,7 @@ namespace AcUsuarios
             // 
             // cbxAlmacen
             // 
+            this.cbxAlmacen.AccessibleName = "almacen";
             this.cbxAlmacen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxAlmacen.AutoSize = true;
             this.cbxAlmacen.Location = new System.Drawing.Point(266, 181);
@@ -288,6 +291,7 @@ namespace AcUsuarios
             // 
             // cbxClientes
             // 
+            this.cbxClientes.AccessibleName = "clientes";
             this.cbxClientes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxClientes.AutoSize = true;
             this.cbxClientes.Location = new System.Drawing.Point(192, 181);
@@ -299,6 +303,7 @@ namespace AcUsuarios
             // 
             // cbxProveedores
             // 
+            this.cbxProveedores.AccessibleName = "proveedores";
             this.cbxProveedores.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxProveedores.AutoSize = true;
             this.cbxProveedores.Location = new System.Drawing.Point(95, 181);
@@ -310,6 +315,7 @@ namespace AcUsuarios
             // 
             // cbxUsuarios
             // 
+            this.cbxUsuarios.AccessibleName = "usuarios";
             this.cbxUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxUsuarios.AutoSize = true;
             this.cbxUsuarios.Location = new System.Drawing.Point(18, 181);

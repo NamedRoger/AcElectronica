@@ -34,7 +34,7 @@ namespace AcUsuarios
             this.mediator = mediator;
         }
 
-       
+
         private void FormUsuario_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
@@ -51,19 +51,22 @@ namespace AcUsuarios
                 if (usuario.Id == 0)
                 {
                     if (!ValidateForm()) throw new Exception("Favor de rellenar los campos requeridos");
-                    if(!string.IsNullOrEmpty(txtFoto.Text))
+                    if (!string.IsNullOrEmpty(txtFoto.Text))
                         usuario.Foto = SaveFotoUser();
 
-                   this._repo.Add(usuario).Wait();
-                    this.Close();
+                    this.AddOrUpdateApps(usuario).Wait();
+                    this._repo.Add(usuario).Wait();
                 }
                 else
                 {
                     usuario = _repo.Get(usuario.Id).Result;
-                    usuario.Foto = SaveFotoUser();
-                    this._repo.Update(usuario.Id,usuario);
-                    usuario.Aplicaciones.Clear();
+                    if (!string.IsNullOrEmpty(txtFoto.Text))
+                        usuario.Foto = SaveFotoUser();
+
+                    this.AddOrUpdateApps(usuario).Wait();
+                    this._repo.Update(usuario.Id, usuario);
                 }
+                this.Close();
             }
             catch (Exception exe)
             {
@@ -86,6 +89,14 @@ namespace AcUsuarios
             txtTelefono.Text = "";
             txtUserName.Text = "";
             txtFoto.Text = "";
+            txtId.Text = "";
+
+            cbxAlmacen.Checked = false;
+            cbxClientes.Checked = false;
+            cbxProveedores.Checked = false;
+            cbxUsuarios.Checked = false;
+            chxInsumos.Checked = false;
+            chxVentas.Checked = false;
 
             pictureBox1.Image = null;
         }
@@ -109,6 +120,13 @@ namespace AcUsuarios
             pictureBox1.Image = usuario == null ?
               null :
               (string.IsNullOrEmpty(usuario.Foto)) ? null : new Bitmap(usuario.Foto);
+
+            cbxUsuarios.Checked = usuario == null ? false : await _repo.HasApplication(usuario.Id, "usuarios");
+            cbxProveedores.Checked = usuario == null ? false : await _repo.HasApplication(usuario.Id, "proveedores");
+            cbxClientes.Checked = usuario == null ? false : await _repo.HasApplication(usuario.Id, "clientes");
+            cbxAlmacen.Checked = usuario == null ? false : await _repo.HasApplication(usuario.Id, "almacen");
+            chxInsumos.Checked = usuario == null ? false : await _repo.HasApplication(usuario.Id, "insumos");
+            chxVentas.Checked = usuario == null ? false : await _repo.HasApplication(usuario.Id, "ventas");
         }
 
         public bool ValidateForm()
@@ -128,7 +146,7 @@ namespace AcUsuarios
             Direccion = txtAddress.Text,
             FechaAlta = txtFechaAlta.Value,
             FechaNacimiento = txtFechaNacimiento.Value,
-            Id = txtId.Text.Trim() == "" ? 0 :  int.Parse(txtId.Text),
+            Id = txtId.Text.Trim() == "" ? 0 : int.Parse(txtId.Text),
             Nss = txtNss.Text,
             NumeroInfonavit = txtNoInfo.Text,
             Password = txtPassword.Text,
@@ -150,17 +168,36 @@ namespace AcUsuarios
         {
             string pathFotos = Path.Combine(Application.StartupPath, "Fotos");
             string sourceFile = txtFoto.Text;
-            return SaveFile(sourceFile,pathFotos);
+            return SaveFile(sourceFile, pathFotos);
         }
 
-        private string SaveFile(string sourceFile,string destinationFile)
+        private string SaveFile(string sourceFile, string destinationFile)
         {
             if (!Directory.Exists(destinationFile)) Directory.CreateDirectory(destinationFile);
             string filePath = Path.Combine(destinationFile, Path.GetFileName(sourceFile));
-            File.Copy(sourceFile,filePath,true);
+            File.Copy(sourceFile, filePath, true);
             return filePath;
         }
 
-       
+        private async Task AddOrUpdateApps(Usuario usuario)
+        {
+            if (cbxAlmacen.Checked) await _repo.AddApp(usuario.Id, cbxAlmacen.AccessibleName.Trim());
+            else await _repo.RemoveApp(usuario.Id, cbxAlmacen.AccessibleName.Trim());
+
+            if (cbxClientes.Checked) await _repo.AddApp(usuario.Id, cbxClientes.AccessibleName.Trim());
+            else await _repo.RemoveApp(usuario.Id, cbxClientes.AccessibleName.Trim());
+
+            if (cbxProveedores.Checked) await _repo.AddApp(usuario.Id, cbxProveedores.AccessibleName.Trim());
+            else await _repo.RemoveApp(usuario.Id, cbxProveedores.AccessibleName.Trim());
+
+            if (cbxUsuarios.Checked) await _repo.AddApp(usuario.Id, cbxUsuarios.AccessibleName.Trim());
+            else await _repo.RemoveApp(usuario.Id, cbxUsuarios.AccessibleName.Trim());
+
+            if (chxInsumos.Checked) await _repo.AddApp(usuario.Id, chxInsumos.AccessibleName.Trim());
+            else await _repo.RemoveApp(usuario.Id, chxInsumos.AccessibleName.Trim());
+
+            if (chxVentas.Checked) await _repo.AddApp(usuario.Id, chxVentas.AccessibleName.Trim());
+            else await _repo.RemoveApp(usuario.Id, chxVentas.AccessibleName.Trim());
+        }
     }
 }
