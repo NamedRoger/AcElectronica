@@ -1,0 +1,12 @@
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\bin\Release\netcoreapp3.1\DatabasaeManager.deps.json
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\bin\Release\netcoreapp3.1\DatabasaeManager.runtimeconfig.json
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\bin\Release\netcoreapp3.1\DatabasaeManager.runtimeconfig.dev.json
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\bin\Release\netcoreapp3.1\DatabasaeManager.dll
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\bin\Release\netcoreapp3.1\DatabasaeManager.pdb
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\obj\Release\netcoreapp3.1\DatabasaeManager.csprojAssemblyReference.cache
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\obj\Release\netcoreapp3.1\DatabasaeManager.AssemblyInfoInputs.cache
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\obj\Release\netcoreapp3.1\DatabasaeManager.AssemblyInfo.cs
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\obj\Release\netcoreapp3.1\DatabasaeManager.csproj.CoreCompileInputs.cache
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\obj\Release\netcoreapp3.1\DatabasaeManager.dll
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\obj\Release\netcoreapp3.1\DatabasaeManager.pdb
+C:\Users\rogev\Desktop\AcElectronica\src\DatabasaeManager\obj\Release\netcoreapp3.1\DatabasaeManager.genruntimeconfig.cache
