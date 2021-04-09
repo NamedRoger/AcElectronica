@@ -1,8 +1,12 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "dZaQ786KHl+agkPfC7cDrqQuqU8haARW+MUMWO2ucu5Db6zzq5ruVK6s8KJbt8Kij+UaE7Hokikps+ugtJr9mg==",
+=======
+  "dgSpecHash": "CPyWtbXMeOZhQOITvSOHYNihhZd/ZS3a5JlVzvvOs1DohUE+oCA9qsjxZ/w7/jjaxG5oGUpXgfTEHZXzdQzSXw==",
+>>>>>>> cbe00491e9a9094d105e1a01f01e6c00d0a20fa9
   "success": true,
-  "projectFilePath": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

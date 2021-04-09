@@ -1664,20 +1664,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rogev\\.nuget\\packages\\": {}
+    "C:\\Users\\Rogelio Villarreal\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\DatabasaeManager\\DatabasaeManager.csproj",
+      "projectUniqueName": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\DatabasaeManager\\DatabasaeManager.csproj",
       "projectName": "DatabasaeManager",
-      "projectPath": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\DatabasaeManager\\DatabasaeManager.csproj",
-      "packagesPath": "C:\\Users\\rogev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\DatabasaeManager\\obj\\",
+      "projectPath": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\DatabasaeManager\\DatabasaeManager.csproj",
+      "packagesPath": "C:\\Users\\Rogelio Villarreal\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\DatabasaeManager\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\rogev\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Rogelio Villarreal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

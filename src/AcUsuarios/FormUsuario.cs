@@ -54,8 +54,11 @@ namespace AcUsuarios
                     if (!string.IsNullOrEmpty(txtFoto.Text))
                         usuario.Foto = SaveFotoUser();
 
-                    this.AddOrUpdateApps(usuario).Wait();
-                    this._repo.Add(usuario).Wait();
+                    var result = this._repo.Add(usuario);
+                    result.Wait();
+                    if(result.IsCompleted){
+                        this.AddOrUpdateApps(usuario).Wait();
+                    }
                 }
                 else
                 {
