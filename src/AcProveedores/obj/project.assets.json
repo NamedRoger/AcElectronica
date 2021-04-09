@@ -1544,30 +1544,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rogelio Villarreal\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\rogev\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\AcProveedores\\AcProveedores.csproj",
+      "projectUniqueName": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\AcProveedores\\AcProveedores.csproj",
       "projectName": "AcProveedores",
-      "projectPath": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\AcProveedores\\AcProveedores.csproj",
-      "packagesPath": "C:\\Users\\Rogelio Villarreal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\AcProveedores\\obj\\",
+      "projectPath": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\AcProveedores\\AcProveedores.csproj",
+      "packagesPath": "C:\\Users\\rogev\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\AcProveedores\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Rogelio Villarreal\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\rogev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0-windows"
+        "net5.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1577,14 +1570,14 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\DatabasaeManager\\DatabasaeManager.csproj": {
-              "projectPath": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\DatabasaeManager\\DatabasaeManager.csproj"
+            "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\DatabasaeManager\\DatabasaeManager.csproj": {
+              "projectPath": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\DatabasaeManager\\DatabasaeManager.csproj"
             },
-            "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\Infrastructure\\Infrastructure.csproj"
             },
-            "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\LoginLib\\Componentes.csproj": {
-              "projectPath": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\LoginLib\\Componentes.csproj"
+            "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\LoginLib\\Componentes.csproj": {
+              "projectPath": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\LoginLib\\Componentes.csproj"
             }
           }
         }

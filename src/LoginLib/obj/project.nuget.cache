@@ -1,12 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "8vsgiXokZ5bt89HgBc2ba8Nn1PW4joiyPQYqRjFfNVcIctoX8Ey/frlOrr2nzgnc2Wu0nBeleO6DHmdhf4+q1Q==",
-=======
-  "dgSpecHash": "ctMto4XbbtiGu60FhdtdubJiozKzgx80HHDWdNYcxxs2mXZypCbaLgqKNEt9GItaHdGQ+cRktEhFAfq8D7mF5A==",
->>>>>>> cbe00491e9a9094d105e1a01f01e6c00d0a20fa9
   "success": true,
-  "projectFilePath": "C:\\Users\\Rogelio Villarreal\\source\\repos\\iguana\\AcElectronica\\src\\LoginLib\\Componentes.csproj",
+  "projectFilePath": "C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\LoginLib\\Componentes.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\rogev\\Desktop\\AcElectronica\\src\\LoginLib\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
