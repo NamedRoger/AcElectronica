@@ -37,6 +37,9 @@ namespace AcUsuarios
 
         public async Task Add(Usuario nuevoUsuario)
         {
+
+            if ((await UserExist(nuevoUsuario.Username))) throw new Exception("Ya existe el usuario");
+
             var result = await _context.Usuarios.AddAsync(nuevoUsuario);
             await _context.SaveChangesAsync();
         }
@@ -47,12 +50,21 @@ namespace AcUsuarios
             oldUser.Celular = usuario.Celular;
             oldUser.Curp = usuario.Curp;
             oldUser.Direccion = usuario.Direccion;
-            oldUser.Foto = usuario.Foto;
+            oldUser.Foto = string.IsNullOrEmpty(usuario.Foto)?oldUser.Foto:usuario.Foto;
             oldUser.Nss = usuario.Nss;
             oldUser.NumeroInfonavit = usuario.NumeroInfonavit;
             oldUser.Password = usuario.Password;
             oldUser.Telefono = usuario.Telefono;
+            oldUser.FechaNacimiento = usuario.FechaNacimiento;
+            oldUser.FechaAlta = usuario.FechaAlta;
+
+            if (oldUser.Username.ToUpper() != usuario.Username.ToUpper())
+            {
+                if (await UserExist(usuario.Username)) throw new Exception("Ya existe el usuario");
+            }
+
             oldUser.Username = usuario.Username;
+
 
             await _context.SaveChangesAsync();
         }
@@ -72,10 +84,10 @@ namespace AcUsuarios
             return has != null;
         }
 
-        public async Task AddApp(int idUser,string app)
+        public async Task AddApp(int idUser, string app)
         {
             var usuario = await Get(idUser);
-            if (!await HasApplication(idUser,app))
+            if (!await HasApplication(idUser, app))
             {
                 var newApp = await _context.Aplicaciones.FirstOrDefaultAsync(a => a.Nombre.ToUpper() == app.ToUpper());
                 if (newApp != null)
@@ -83,11 +95,11 @@ namespace AcUsuarios
                     usuario.Aplicaciones.Add(newApp);
                     await _context.SaveChangesAsync();
                 }
-               
+
             }
         }
 
-        public async Task RemoveApp(int idUser,string app)
+        public async Task RemoveApp(int idUser, string app)
         {
             var usuario = await Get(idUser);
             if (await HasApplication(idUser, app))
@@ -98,8 +110,15 @@ namespace AcUsuarios
                     usuario.Aplicaciones.Remove(newApp);
                     await _context.SaveChangesAsync();
                 }
-                
+
             }
+        }
+
+        public async Task<bool> UserExist(string username)
+        {
+            var findUser = await _context.Usuarios.FirstOrDefaultAsync(u => u.Username.ToUpper() == username.ToUpper());
+
+            return findUser != null;
         }
 
     }

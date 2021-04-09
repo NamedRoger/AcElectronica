@@ -95,6 +95,8 @@
             this.label30 = new System.Windows.Forms.Label();
             this.txtBanco3 = new System.Windows.Forms.TextBox();
             this.tablaProveedores = new System.Windows.Forms.DataGridView();
+            this.txtPaqueteria = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabBancos.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -117,6 +119,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.label31);
+            this.panel1.Controls.Add(this.txtPaqueteria);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.txtNotas);
             this.panel1.Controls.Add(this.label20);
@@ -749,6 +753,7 @@
             this.tablaProveedores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tablaProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tablaProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaProveedores.Location = new System.Drawing.Point(17, 552);
             this.tablaProveedores.Name = "tablaProveedores";
@@ -757,6 +762,23 @@
             this.tablaProveedores.Size = new System.Drawing.Size(955, 172);
             this.tablaProveedores.TabIndex = 2;
             this.tablaProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaProveedores_CellClick);
+            // 
+            // txtPaqueteria
+            // 
+            this.txtPaqueteria.Enabled = false;
+            this.txtPaqueteria.Location = new System.Drawing.Point(536, 273);
+            this.txtPaqueteria.Name = "txtPaqueteria";
+            this.txtPaqueteria.Size = new System.Drawing.Size(134, 23);
+            this.txtPaqueteria.TabIndex = 49;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(472, 276);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(63, 15);
+            this.label31.TabIndex = 50;
+            this.label31.Text = "Paqueteria";
             // 
             // Proveedores
             // 
@@ -769,7 +791,7 @@
             this.MinimizeBox = false;
             this.Name = "Proveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Proveedores";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Proveedores_Load);
             this.panel1.ResumeLayout(false);
@@ -866,6 +888,9 @@
         private System.Windows.Forms.TextBox txtBanco3;
         private System.Windows.Forms.TextBox txtCuentaBancaria3;
         private System.Windows.Forms.TextBox txtClaveInter3;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPaqueteria;
     }
 }
 

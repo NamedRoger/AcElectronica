@@ -71,6 +71,8 @@ namespace AcProveedores
             txtBanco.Text = "";
             txtBanco2.Text = "";
             txtBanco3.Text = "";
+            txtCiudad.Text = "";
+            txtCel.Text = "";
             txtClaveInter.Text = "";
             txtClaveInter2.Text = "";
             txtClaveInter3.Text = "";
@@ -83,6 +85,7 @@ namespace AcProveedores
             txtEstado.Text = "";
             txtNotas.Text = "";
             txtPais.Text = "";
+            txtPaqueteria.Text =  "";
             txtRazonSocial.Text = "";
             txtRepreCel.Text = "";
             txtRepreCiudad.Text = "";
@@ -105,6 +108,8 @@ namespace AcProveedores
             txtBanco.Text = proveedor == null ? "" : proveedor.Banco;
             txtBanco2.Text = proveedor == null ? "" : proveedor.Banco2;
             txtBanco3.Text = proveedor == null ? "" : proveedor.Banco3;
+            txtCel.Text = proveedor == null ? "" : proveedor.Celular;
+            txtCiudad.Text = proveedor == null ? "" : proveedor.Ciudad;
             txtClaveInter.Text = proveedor == null ? "" : proveedor.ClaveBancaria;
             txtClaveInter2.Text = proveedor == null ? "" : proveedor.ClaveBancaria2;
             txtClaveInter3.Text = proveedor == null ? "" : proveedor.ClaveBancaria3;
@@ -117,6 +122,7 @@ namespace AcProveedores
             txtEstado.Text = proveedor == null ? "" : proveedor.Estado;
             txtNotas.Text = proveedor == null ? "" : proveedor.Notas;
             txtPais.Text = proveedor == null ? "" : proveedor.Pais;
+            txtPaqueteria.Text = proveedor == null ? "" : proveedor.Paqueteria;
             txtRazonSocial.Text = proveedor == null ? "" : proveedor.RazonSocial;
             txtRepreCel.Text = proveedor == null ? "" : proveedor.RepresentanteCelular;
             txtRepreCiudad.Text = proveedor == null ? "" : proveedor.RepresentanteCiudad;

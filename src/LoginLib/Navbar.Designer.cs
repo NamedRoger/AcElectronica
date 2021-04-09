@@ -59,6 +59,7 @@ namespace LoginLib
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnBuscar.Location = new System.Drawing.Point(575, 23);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(22, 23);
@@ -68,6 +69,7 @@ namespace LoginLib
             // 
             // logo
             // 
+            this.logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
             this.logo.Location = new System.Drawing.Point(12, 11);
             this.logo.Name = "logo";
@@ -78,6 +80,7 @@ namespace LoginLib
             // 
             // txtBuscar
             // 
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtBuscar.Location = new System.Drawing.Point(103, 23);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(466, 23);
@@ -85,6 +88,7 @@ namespace LoginLib
             // 
             // btnBorrar
             // 
+            this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnBorrar.BackColor = System.Drawing.Color.Red;
             this.btnBorrar.FlatAppearance.BorderSize = 0;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -98,6 +102,7 @@ namespace LoginLib
             // 
             // btnEditar
             // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnEditar.Location = new System.Drawing.Point(682, 23);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(45, 23);
@@ -107,6 +112,7 @@ namespace LoginLib
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAgregar.FlatAppearance.BorderSize = 0;

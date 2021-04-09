@@ -44,13 +44,13 @@ namespace AcUsuarios
             navbar1.AddButtonAgregar((s, e) =>
             {
                 SelectedUsuario = null;
-                this._mediator.Notificar(s, "openForm");
+                this._mediator.Notificar(s, "openFormAdd");
             });
 
             navbar1.AddButtonEditar((s, e) =>
             {
                 if (_usuario == null) ShowAlert("No ha seleccionado ningun usuario", "Error");
-                else this._mediator.Notificar(s, "openForm");
+                else this._mediator.Notificar(s, "openFormEdit");
             });
 
             navbar1.AddButtonEliminar((s, e) =>

@@ -48,9 +48,9 @@ namespace AcUsuarios
             var usuario = GetUsuario();
             try
             {
+                if (!ValidateForm()) throw new Exception("Favor de rellenar los campos requeridos");
                 if (usuario.Id == 0)
                 {
-                    if (!ValidateForm()) throw new Exception("Favor de rellenar los campos requeridos");
                     if (!string.IsNullOrEmpty(txtFoto.Text))
                         usuario.Foto = SaveFotoUser();
 
@@ -59,12 +59,11 @@ namespace AcUsuarios
                 }
                 else
                 {
-                    usuario = _repo.Get(usuario.Id).Result;
                     if (!string.IsNullOrEmpty(txtFoto.Text))
                         usuario.Foto = SaveFotoUser();
 
                     this.AddOrUpdateApps(usuario).Wait();
-                    this._repo.Update(usuario.Id, usuario);
+                        this._repo.Update(usuario.Id, usuario).Wait();
                 }
                 this.Close();
             }
@@ -117,9 +116,15 @@ namespace AcUsuarios
             txtTelefono.Text = usuario == null ? "" : usuario.Telefono;
             txtUserName.Text = usuario == null ? "" : usuario.Username;
 
-            pictureBox1.Image = usuario == null ?
-              null :
-              (string.IsNullOrEmpty(usuario.Foto)) ? null : new Bitmap(usuario.Foto);
+            if (usuario == null || string.IsNullOrEmpty(usuario.Foto))
+            {
+                pictureBox1.Image = null;
+                txtFoto.Text = "";
+            }
+            else
+            {
+                pictureBox1.Image = new Bitmap(usuario.Foto);
+            }
 
             cbxUsuarios.Checked = usuario == null ? false : await _repo.HasApplication(usuario.Id, "usuarios");
             cbxProveedores.Checked = usuario == null ? false : await _repo.HasApplication(usuario.Id, "proveedores");

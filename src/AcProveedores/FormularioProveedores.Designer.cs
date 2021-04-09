@@ -746,7 +746,9 @@ namespace AcProveedores
             this.ClientSize = new System.Drawing.Size(1004, 552);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "FormularioProveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Proveedor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormularioProveedores_FormClosing);
             this.panel1.ResumeLayout(false);

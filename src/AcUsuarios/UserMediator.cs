@@ -41,13 +41,17 @@ namespace AcUsuarios
             switch (e)
             {
                 case "formularioCierre":
-                    if(this._componentUsers.SelectedUsuario != null)
-                        this.ResetFormUsuariosPrincipal();
+                    this.ResetFormUsuariosPrincipal();
                     this._componentUsers.LoadTable().Wait();
                     break;
-                case "openForm":
+                case "openFormAdd":
                     this._formUsuario.Show();
-                    if (this._componentUsers.SelectedUsuario != null) 
+                    this._formUsuario.Text = "Agregar Usuario";
+                    break;
+                case "openFormEdit":
+                    this._formUsuario.Show();
+                    this._formUsuario.Text = "Editar Usuario";
+                    if (this._componentUsers.SelectedUsuario != null)
                         this._formUsuario.LoadForm(this._componentUsers.SelectedUsuario.Id).Wait();
                     break;
             }

@@ -24,10 +24,15 @@ namespace AcProveedores
         {
             switch (e)
             {
-                case "openFormulario":
+                case "openFormularioAdd":
                     this.FormularioProveedores.Show();
-                    if (this.componentProveedores.Proveedor != null) 
+                    this.FormularioProveedores.Text = "Agregar Proveedor";
+                    break;
+                case "openFormularioEdit":
+                    this.FormularioProveedores.Show();
+                    if (this.componentProveedores.Proveedor != null)
                         this.FormularioProveedores.LoadForm(this.componentProveedores.Proveedor.Id).Wait();
+                    this.FormularioProveedores.Text = "Editar Proveedor";
                     break;
                 case "closeFormulario":
                     this.componentProveedores.ResetForm();

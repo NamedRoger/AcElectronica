@@ -45,13 +45,13 @@ namespace AcProveedores
             this.navbar1.AddButtonAgregar((s, e) =>
             {
                 Proveedor = null;
-                this.mediator.Notificar(s, "openFormulario");
+                this.mediator.Notificar(s, "openFormularioAdd");
             });
 
             this.navbar1.AddButtonEditar((s, e) =>
             {
                 if (Proveedor == null) ShowAlert("No se ha seleccionado un Proveedor", "Error");
-                else this.mediator.Notificar(s,"openFormulario");
+                else this.mediator.Notificar(s, "openFormularioEdit");
             });
 
             this.navbar1.AddButtonEliminar((s, e) =>
@@ -108,10 +108,11 @@ namespace AcProveedores
 
         public void LoadForm()
         {
-            txtApodo.Text = this.Proveedor == null?"": this.Proveedor.ApodoProveedor;
+            txtApodo.Text = this.Proveedor == null ? "" : this.Proveedor.ApodoProveedor;
             txtBanco.Text = this.Proveedor == null ? "" : this.Proveedor.Banco;
             txtBanco2.Text = this.Proveedor == null ? "" : this.Proveedor.Banco2;
             txtBanco3.Text = this.Proveedor == null ? "" : this.Proveedor.Banco3;
+            txtCel.Text = this.Proveedor == null ? "" : this.Proveedor.Celular;
             txtClaveInter.Text = this.Proveedor == null ? "" : this.Proveedor.ClaveBancaria;
             txtClaveInter2.Text = this.Proveedor == null ? "" : this.Proveedor.ClaveBancaria2;
             txtClaveInter3.Text = this.Proveedor == null ? "" : this.Proveedor.ClaveBancaria3;
@@ -119,6 +120,7 @@ namespace AcProveedores
             txtCuentaBancaria.Text = this.Proveedor == null ? "" : this.Proveedor.CuentaBancaria;
             txtCuentaBancaria2.Text = this.Proveedor == null ? "" : this.Proveedor.CuentaBancaria2;
             txtCuentaBancaria3.Text = this.Proveedor == null ? "" : this.Proveedor.CuentaBancaria3;
+            txtCiudad.Text = this.Proveedor == null ? "" : this.Proveedor.Ciudad;
             txtDomicilio.Text = this.Proveedor == null ? "" : this.Proveedor.Domicilio;
             txtEmail.Text = this.Proveedor == null ? "" : this.Proveedor.Email;
             txtEstado.Text = this.Proveedor == null ? "" : this.Proveedor.Estado;
@@ -136,6 +138,7 @@ namespace AcProveedores
             txtRepreTelefono.Text = this.Proveedor == null ? "" : this.Proveedor.RepresentanteTelefeono;
             txtRfc.Text = this.Proveedor == null ? "" : this.Proveedor.Rfc;
             txtTelefono.Text = this.Proveedor == null ? "" : this.Proveedor.Telefono;
+            txtPaqueteria.Text = this.Proveedor == null ? "" : this.Proveedor.Paqueteria;
         }
 
         private void tablaProveedores_CellClick(object sender, DataGridViewCellEventArgs e)

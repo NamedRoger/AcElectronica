@@ -383,7 +383,9 @@ namespace AcUsuarios
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "FormUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormUsuario";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormUsuario_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
