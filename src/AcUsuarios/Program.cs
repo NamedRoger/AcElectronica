@@ -22,12 +22,14 @@ namespace AcUsuarios
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            
             var services = new ServiceCollection();
             ConfigureServices(services);
 
             using ServiceProvider serviceProvider = services.BuildServiceProvider();
             FormUsuario formUsuario = serviceProvider.GetRequiredService<FormUsuario>();
             Usuarios usuarios = serviceProvider.GetRequiredService<Usuarios>();
+            
             UserMediator mediator = new UserMediator(formUsuario, usuarios);
             Application.Run(usuarios);
         }

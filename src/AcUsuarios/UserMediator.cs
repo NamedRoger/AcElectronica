@@ -45,14 +45,15 @@ namespace AcUsuarios
                     this._componentUsers.LoadTable().Wait();
                     break;
                 case "openFormAdd":
-                    this._formUsuario.Show();
-                    this._formUsuario.Text = "Agregar Usuario";
+                    this._formUsuario.Text = "Agregar ";
+                    this._formUsuario.ShowDialog();
                     break;
                 case "openFormEdit":
-                    this._formUsuario.Show();
-                    this._formUsuario.Text = "Editar Usuario";
+                    this._formUsuario.Text = "Editar ";
                     if (this._componentUsers.SelectedUsuario != null)
                         this._formUsuario.LoadForm(this._componentUsers.SelectedUsuario.Id).Wait();
+                    this._formUsuario.ShowDialog();
+                   
                     break;
             }
         }

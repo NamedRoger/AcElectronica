@@ -61,12 +61,13 @@ namespace AcUsuarios
             this.btnFoto = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtFoto = new System.Windows.Forms.TextBox();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(645, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(696, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(173, 148);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +78,7 @@ namespace AcUsuarios
             // 
             this.txtFechaAlta.CustomFormat = "";
             this.txtFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtFechaAlta.Location = new System.Drawing.Point(395, 137);
+            this.txtFechaAlta.Location = new System.Drawing.Point(480, 137);
             this.txtFechaAlta.Name = "txtFechaAlta";
             this.txtFechaAlta.Size = new System.Drawing.Size(200, 23);
             this.txtFechaAlta.TabIndex = 48;
@@ -92,7 +93,7 @@ namespace AcUsuarios
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(334, 137);
+            this.label6.Location = new System.Drawing.Point(405, 137);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(69, 35);
@@ -101,7 +102,7 @@ namespace AcUsuarios
             // 
             // txtNoInfo
             // 
-            this.txtNoInfo.Location = new System.Drawing.Point(416, 99);
+            this.txtNoInfo.Location = new System.Drawing.Point(506, 99);
             this.txtNoInfo.Name = "txtNoInfo";
             this.txtNoInfo.Size = new System.Drawing.Size(179, 23);
             this.txtNoInfo.TabIndex = 45;
@@ -115,14 +116,14 @@ namespace AcUsuarios
             // 
             // txtCurp
             // 
-            this.txtCurp.Location = new System.Drawing.Point(464, 70);
+            this.txtCurp.Location = new System.Drawing.Point(554, 70);
             this.txtCurp.Name = "txtCurp";
             this.txtCurp.Size = new System.Drawing.Size(131, 23);
             this.txtCurp.TabIndex = 43;
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(279, 70);
+            this.txtCelular.Location = new System.Drawing.Point(334, 70);
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(131, 23);
             this.txtCelular.TabIndex = 42;
@@ -130,7 +131,7 @@ namespace AcUsuarios
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(229, 73);
+            this.label11.Location = new System.Drawing.Point(284, 73);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 15);
             this.label11.TabIndex = 41;
@@ -139,7 +140,7 @@ namespace AcUsuarios
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(416, 73);
+            this.label10.Location = new System.Drawing.Point(515, 73);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(33, 15);
             this.label10.TabIndex = 40;
@@ -157,7 +158,7 @@ namespace AcUsuarios
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(334, 102);
+            this.label8.Location = new System.Drawing.Point(424, 102);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 15);
             this.label8.TabIndex = 38;
@@ -191,7 +192,7 @@ namespace AcUsuarios
             // 
             this.txtAddress.Location = new System.Drawing.Point(92, 41);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(503, 23);
+            this.txtAddress.Size = new System.Drawing.Size(593, 23);
             this.txtAddress.TabIndex = 34;
             // 
             // label3
@@ -205,7 +206,7 @@ namespace AcUsuarios
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(390, 12);
+            this.txtPassword.Location = new System.Drawing.Point(480, 15);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(205, 23);
             this.txtPassword.TabIndex = 32;
@@ -213,7 +214,7 @@ namespace AcUsuarios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(317, 15);
+            this.label2.Location = new System.Drawing.Point(402, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 15);
             this.label2.TabIndex = 31;
@@ -237,10 +238,10 @@ namespace AcUsuarios
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(374, 221);
+            this.btnGuardar.Location = new System.Drawing.Point(346, 221);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 50;
+            this.btnGuardar.TabIndex = 56;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -258,10 +259,10 @@ namespace AcUsuarios
             this.chxVentas.AccessibleName = "ventas";
             this.chxVentas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chxVentas.AutoSize = true;
-            this.chxVentas.Location = new System.Drawing.Point(422, 181);
+            this.chxVentas.Location = new System.Drawing.Point(447, 181);
             this.chxVentas.Name = "chxVentas";
             this.chxVentas.Size = new System.Drawing.Size(60, 19);
-            this.chxVentas.TabIndex = 67;
+            this.chxVentas.TabIndex = 54;
             this.chxVentas.Text = "Ventas";
             this.chxVentas.UseVisualStyleBackColor = true;
             // 
@@ -270,10 +271,10 @@ namespace AcUsuarios
             this.chxInsumos.AccessibleName = "insumos";
             this.chxInsumos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chxInsumos.AutoSize = true;
-            this.chxInsumos.Location = new System.Drawing.Point(345, 180);
+            this.chxInsumos.Location = new System.Drawing.Point(370, 180);
             this.chxInsumos.Name = "chxInsumos";
             this.chxInsumos.Size = new System.Drawing.Size(71, 19);
-            this.chxInsumos.TabIndex = 66;
+            this.chxInsumos.TabIndex = 53;
             this.chxInsumos.Text = "Insumos";
             this.chxInsumos.UseVisualStyleBackColor = true;
             // 
@@ -282,10 +283,10 @@ namespace AcUsuarios
             this.cbxAlmacen.AccessibleName = "almacen";
             this.cbxAlmacen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxAlmacen.AutoSize = true;
-            this.cbxAlmacen.Location = new System.Drawing.Point(266, 181);
+            this.cbxAlmacen.Location = new System.Drawing.Point(291, 181);
             this.cbxAlmacen.Name = "cbxAlmacen";
             this.cbxAlmacen.Size = new System.Drawing.Size(73, 19);
-            this.cbxAlmacen.TabIndex = 65;
+            this.cbxAlmacen.TabIndex = 52;
             this.cbxAlmacen.Text = "Almacen";
             this.cbxAlmacen.UseVisualStyleBackColor = true;
             // 
@@ -294,10 +295,10 @@ namespace AcUsuarios
             this.cbxClientes.AccessibleName = "clientes";
             this.cbxClientes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxClientes.AutoSize = true;
-            this.cbxClientes.Location = new System.Drawing.Point(192, 181);
+            this.cbxClientes.Location = new System.Drawing.Point(217, 181);
             this.cbxClientes.Name = "cbxClientes";
             this.cbxClientes.Size = new System.Drawing.Size(68, 19);
-            this.cbxClientes.TabIndex = 64;
+            this.cbxClientes.TabIndex = 51;
             this.cbxClientes.Text = "Clientes";
             this.cbxClientes.UseVisualStyleBackColor = true;
             // 
@@ -306,10 +307,10 @@ namespace AcUsuarios
             this.cbxProveedores.AccessibleName = "proveedores";
             this.cbxProveedores.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxProveedores.AutoSize = true;
-            this.cbxProveedores.Location = new System.Drawing.Point(95, 181);
+            this.cbxProveedores.Location = new System.Drawing.Point(120, 181);
             this.cbxProveedores.Name = "cbxProveedores";
             this.cbxProveedores.Size = new System.Drawing.Size(91, 19);
-            this.cbxProveedores.TabIndex = 63;
+            this.cbxProveedores.TabIndex = 50;
             this.cbxProveedores.Text = "Proveedores";
             this.cbxProveedores.UseVisualStyleBackColor = true;
             // 
@@ -318,19 +319,19 @@ namespace AcUsuarios
             this.cbxUsuarios.AccessibleName = "usuarios";
             this.cbxUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbxUsuarios.AutoSize = true;
-            this.cbxUsuarios.Location = new System.Drawing.Point(18, 181);
+            this.cbxUsuarios.Location = new System.Drawing.Point(43, 181);
             this.cbxUsuarios.Name = "cbxUsuarios";
             this.cbxUsuarios.Size = new System.Drawing.Size(71, 19);
-            this.cbxUsuarios.TabIndex = 62;
+            this.cbxUsuarios.TabIndex = 49;
             this.cbxUsuarios.Text = "Usuarios";
             this.cbxUsuarios.UseVisualStyleBackColor = true;
             // 
             // btnFoto
             // 
-            this.btnFoto.Location = new System.Drawing.Point(696, 166);
+            this.btnFoto.Location = new System.Drawing.Point(739, 166);
             this.btnFoto.Name = "btnFoto";
             this.btnFoto.Size = new System.Drawing.Size(75, 23);
-            this.btnFoto.TabIndex = 68;
+            this.btnFoto.TabIndex = 55;
             this.btnFoto.Text = "Files";
             this.btnFoto.UseVisualStyleBackColor = true;
             this.btnFoto.Click += new System.EventHandler(this.bus_Click);
@@ -341,17 +342,28 @@ namespace AcUsuarios
             // 
             // txtFoto
             // 
-            this.txtFoto.Location = new System.Drawing.Point(685, 195);
+            this.txtFoto.Location = new System.Drawing.Point(739, 195);
             this.txtFoto.Name = "txtFoto";
             this.txtFoto.Size = new System.Drawing.Size(100, 23);
             this.txtFoto.TabIndex = 69;
             this.txtFoto.Visible = false;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(455, 221);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 57;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 256);
+            this.ClientSize = new System.Drawing.Size(899, 296);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.txtFoto);
             this.Controls.Add(this.btnFoto);
             this.Controls.Add(this.chxVentas);
@@ -428,5 +440,7 @@ namespace AcUsuarios
         private System.Windows.Forms.Button btnFoto;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txtFoto;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

@@ -142,6 +142,11 @@ namespace AcUsuarios
 
        
         public async Task DeleteUser(int id) => await this._repo.Delete(id);
+
+        private void chxVentas_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

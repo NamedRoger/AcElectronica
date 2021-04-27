@@ -207,5 +207,10 @@ namespace AcUsuarios
             if (chxVentas.Checked) await _repo.AddApp(usuario.Id, chxVentas.AccessibleName.Trim());
             else await _repo.RemoveApp(usuario.Id, chxVentas.AccessibleName.Trim());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -98,6 +98,7 @@ namespace AcProveedores
             this.label30 = new System.Windows.Forms.Label();
             this.txtBanco3 = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
             this.tabBancos.SuspendLayout();
@@ -156,7 +157,7 @@ namespace AcProveedores
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtApodo);
             this.panel1.Controls.Add(this.tabBancos);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(35, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(983, 458);
             this.panel1.TabIndex = 2;
@@ -176,7 +177,7 @@ namespace AcProveedores
             this.txtPaqueteria.Location = new System.Drawing.Point(535, 273);
             this.txtPaqueteria.Name = "txtPaqueteria";
             this.txtPaqueteria.Size = new System.Drawing.Size(135, 23);
-            this.txtPaqueteria.TabIndex = 51;
+            this.txtPaqueteria.TabIndex = 20;
             // 
             // txtId
             // 
@@ -201,7 +202,7 @@ namespace AcProveedores
             this.txtNotas.Multiline = true;
             this.txtNotas.Name = "txtNotas";
             this.txtNotas.Size = new System.Drawing.Size(805, 36);
-            this.txtNotas.TabIndex = 47;
+            this.txtNotas.TabIndex = 21;
             // 
             // label20
             // 
@@ -217,21 +218,21 @@ namespace AcProveedores
             this.txtEmail.Location = new System.Drawing.Point(144, 273);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(322, 23);
-            this.txtEmail.TabIndex = 45;
+            this.txtEmail.TabIndex = 19;
             // 
             // txtTel
             // 
             this.txtTel.Location = new System.Drawing.Point(654, 247);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(134, 23);
-            this.txtTel.TabIndex = 44;
+            this.txtTel.TabIndex = 17;
             // 
             // txtCel
             // 
             this.txtCel.Location = new System.Drawing.Point(825, 247);
             this.txtCel.Name = "txtCel";
             this.txtCel.Size = new System.Drawing.Size(134, 23);
-            this.txtCel.TabIndex = 43;
+            this.txtCel.TabIndex = 18;
             // 
             // label18
             // 
@@ -265,7 +266,7 @@ namespace AcProveedores
             this.txtCp.Location = new System.Drawing.Point(487, 244);
             this.txtCp.Name = "txtCp";
             this.txtCp.Size = new System.Drawing.Size(105, 23);
-            this.txtCp.TabIndex = 38;
+            this.txtCp.TabIndex = 16;
             // 
             // label12
             // 
@@ -281,7 +282,7 @@ namespace AcProveedores
             this.txtPais.Location = new System.Drawing.Point(316, 244);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(134, 23);
-            this.txtPais.TabIndex = 36;
+            this.txtPais.TabIndex = 15;
             // 
             // label13
             // 
@@ -297,7 +298,7 @@ namespace AcProveedores
             this.txtEstado.Location = new System.Drawing.Point(144, 244);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(134, 23);
-            this.txtEstado.TabIndex = 34;
+            this.txtEstado.TabIndex = 14;
             // 
             // label16
             // 
@@ -313,7 +314,7 @@ namespace AcProveedores
             this.txtCiudad.Location = new System.Drawing.Point(794, 215);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(134, 23);
-            this.txtCiudad.TabIndex = 32;
+            this.txtCiudad.TabIndex = 13;
             // 
             // label17
             // 
@@ -329,14 +330,14 @@ namespace AcProveedores
             this.txtDomicilio.Location = new System.Drawing.Point(144, 215);
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.Size = new System.Drawing.Size(593, 23);
-            this.txtDomicilio.TabIndex = 30;
+            this.txtDomicilio.TabIndex = 12;
             // 
             // txtRfc
             // 
             this.txtRfc.Location = new System.Drawing.Point(710, 188);
             this.txtRfc.Name = "txtRfc";
             this.txtRfc.Size = new System.Drawing.Size(134, 23);
-            this.txtRfc.TabIndex = 29;
+            this.txtRfc.TabIndex = 11;
             // 
             // label14
             // 
@@ -352,7 +353,7 @@ namespace AcProveedores
             this.txtRazonSocial.Location = new System.Drawing.Point(144, 188);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(526, 23);
-            this.txtRazonSocial.TabIndex = 21;
+            this.txtRazonSocial.TabIndex = 10;
             // 
             // label15
             // 
@@ -377,7 +378,7 @@ namespace AcProveedores
             this.txtRepreCp.Location = new System.Drawing.Point(144, 153);
             this.txtRepreCp.Name = "txtRepreCp";
             this.txtRepreCp.Size = new System.Drawing.Size(105, 23);
-            this.txtRepreCp.TabIndex = 18;
+            this.txtRepreCp.TabIndex = 9;
             // 
             // label9
             // 
@@ -393,7 +394,7 @@ namespace AcProveedores
             this.txtReprePais.Location = new System.Drawing.Point(661, 124);
             this.txtReprePais.Name = "txtReprePais";
             this.txtReprePais.Size = new System.Drawing.Size(134, 23);
-            this.txtReprePais.TabIndex = 16;
+            this.txtReprePais.TabIndex = 8;
             // 
             // label8
             // 
@@ -409,7 +410,7 @@ namespace AcProveedores
             this.txtRepreEstado.Location = new System.Drawing.Point(409, 124);
             this.txtRepreEstado.Name = "txtRepreEstado";
             this.txtRepreEstado.Size = new System.Drawing.Size(134, 23);
-            this.txtRepreEstado.TabIndex = 14;
+            this.txtRepreEstado.TabIndex = 7;
             // 
             // label7
             // 
@@ -425,7 +426,7 @@ namespace AcProveedores
             this.txtRepreCiudad.Location = new System.Drawing.Point(144, 124);
             this.txtRepreCiudad.Name = "txtRepreCiudad";
             this.txtRepreCiudad.Size = new System.Drawing.Size(134, 23);
-            this.txtRepreCiudad.TabIndex = 12;
+            this.txtRepreCiudad.TabIndex = 6;
             // 
             // label6
             // 
@@ -441,14 +442,14 @@ namespace AcProveedores
             this.txtRepreDomicilio.Location = new System.Drawing.Point(144, 95);
             this.txtRepreDomicilio.Name = "txtRepreDomicilio";
             this.txtRepreDomicilio.Size = new System.Drawing.Size(593, 23);
-            this.txtRepreDomicilio.TabIndex = 10;
+            this.txtRepreDomicilio.TabIndex = 5;
             // 
             // txtRepreEmail
             // 
             this.txtRepreEmail.Location = new System.Drawing.Point(144, 69);
             this.txtRepreEmail.Name = "txtRepreEmail";
             this.txtRepreEmail.Size = new System.Drawing.Size(322, 23);
-            this.txtRepreEmail.TabIndex = 9;
+            this.txtRepreEmail.TabIndex = 4;
             // 
             // label5
             // 
@@ -464,7 +465,7 @@ namespace AcProveedores
             this.txtRepreCel.Location = new System.Drawing.Point(412, 37);
             this.txtRepreCel.Name = "txtRepreCel";
             this.txtRepreCel.Size = new System.Drawing.Size(134, 23);
-            this.txtRepreCel.TabIndex = 7;
+            this.txtRepreCel.TabIndex = 3;
             // 
             // label4
             // 
@@ -489,14 +490,14 @@ namespace AcProveedores
             this.txtRepreTel.Location = new System.Drawing.Point(144, 37);
             this.txtRepreTel.Name = "txtRepreTel";
             this.txtRepreTel.Size = new System.Drawing.Size(134, 23);
-            this.txtRepreTel.TabIndex = 4;
+            this.txtRepreTel.TabIndex = 2;
             // 
             // txtRepresentante
             // 
             this.txtRepresentante.Location = new System.Drawing.Point(338, 8);
             this.txtRepresentante.Name = "txtRepresentante";
             this.txtRepresentante.Size = new System.Drawing.Size(435, 23);
-            this.txtRepresentante.TabIndex = 3;
+            this.txtRepresentante.TabIndex = 1;
             // 
             // label2
             // 
@@ -567,7 +568,7 @@ namespace AcProveedores
             this.txtClaveInter.Location = new System.Drawing.Point(117, 37);
             this.txtClaveInter.Name = "txtClaveInter";
             this.txtClaveInter.Size = new System.Drawing.Size(435, 23);
-            this.txtClaveInter.TabIndex = 52;
+            this.txtClaveInter.TabIndex = 24;
             // 
             // label23
             // 
@@ -583,7 +584,7 @@ namespace AcProveedores
             this.txtCuentaBancaria.Location = new System.Drawing.Point(290, 8);
             this.txtCuentaBancaria.Name = "txtCuentaBancaria";
             this.txtCuentaBancaria.Size = new System.Drawing.Size(322, 23);
-            this.txtCuentaBancaria.TabIndex = 50;
+            this.txtCuentaBancaria.TabIndex = 23;
             // 
             // label22
             // 
@@ -599,7 +600,7 @@ namespace AcProveedores
             this.txtBanco.Location = new System.Drawing.Point(51, 8);
             this.txtBanco.Name = "txtBanco";
             this.txtBanco.Size = new System.Drawing.Size(134, 23);
-            this.txtBanco.TabIndex = 5;
+            this.txtBanco.TabIndex = 22;
             // 
             // tabBanco2
             // 
@@ -663,7 +664,7 @@ namespace AcProveedores
             this.txtBanco2.Location = new System.Drawing.Point(54, 11);
             this.txtBanco2.Name = "txtBanco2";
             this.txtBanco2.Size = new System.Drawing.Size(134, 23);
-            this.txtBanco2.TabIndex = 54;
+            this.txtBanco2.TabIndex = 25;
             // 
             // tabPage3
             // 
@@ -739,11 +740,22 @@ namespace AcProveedores
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(529, 476);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.TabIndex = 4;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormularioProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 552);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -751,6 +763,7 @@ namespace AcProveedores
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Proveedor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormularioProveedores_FormClosing);
+            this.Load += new System.EventHandler(this.FormularioProveedores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtId)).EndInit();
@@ -850,5 +863,6 @@ namespace AcProveedores
         private System.Windows.Forms.NumericUpDown txtId;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox txtPaqueteria;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
