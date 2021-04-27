@@ -1,5 +1,3 @@
-using DatabasaeManager;
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcProveedores
+namespace AcClientes
 {
     static class Program
     {
@@ -38,25 +36,8 @@ namespace AcProveedores
 
             if (!isOpenProcess)
             {
-                var services = new ServiceCollection();
-                ConfigureServices(services);
-
-                using ServiceProvider serviceProvider = services.BuildServiceProvider();
-                FormularioProveedores formularioProveedores = serviceProvider.GetRequiredService<FormularioProveedores>();
-                Proveedores proveedores = serviceProvider.GetRequiredService<Proveedores>();
-
-                ProveedorMediator proveedorMediator = new(proveedores, formularioProveedores);
-                Application.Run(proveedores);
+                Application.Run(new Clientes());
             }
-           
-        }
-
-        static void ConfigureServices(ServiceCollection services)
-        {
-            services.AddDbContext<DataContext>();
-            services.AddScoped<FormularioProveedores>();
-            services.AddScoped<Proveedores>();
-            services.AddSingleton<IRepoProveedor,RepoProveedor>();
         }
     }
 }

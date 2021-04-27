@@ -73,6 +73,51 @@ namespace AcProveedores
                 }
             });
 
+            this.navbar1.AddExcelExport((s,e)=> {
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = "Excel|*.xlsx"})
+                {
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            var proveedores = _repo.GetAll().Result.Select(p => new Proveedor { 
+                                ApodoProveedor = p.ApodoProveedor,
+                                Banco = p.Banco,
+                                Banco2 = p.Banco2,
+                                Banco3 = p.Banco3,
+                                Celular = p.Celular,
+                                Ciudad = p.Ciudad,
+                                ClaveBancaria = p.ClaveBancaria,
+                                ClaveBancaria2 = p.ClaveBancaria2,
+                                ClaveBancaria3 = p.ClaveBancaria3,
+                                Cp = p.Cp,
+                                CuentaBancaria = p.CuentaBancaria,
+                                CuentaBancaria2 = p.CuentaBancaria2,
+                                CuentaBancaria3 = p.CuentaBancaria3,
+                                Domicilio = p.Domicilio,
+                                Email = p.Email,
+                                Estado = p.Estado,
+                                FechaAlta = p.FechaAlta == DateTime.MinValue ? null: p.FechaAlta,
+                                UltimaCompra = p.UltimaCompra == DateTime.MinValue ? null : p.FechaAlta,
+                                Notas = p.Notas,
+                                Paqueteria = p.Paqueteria,
+                                RazonSocial = p.RazonSocial,
+                                Representante = p.Representante,
+                                RepresentanteCelular = p.RepresentanteCelular,
+                                Rfc = p.Rfc,
+                                Telefono = p.Telefono,
+                            }).ToList();
+
+                            Exportar.Excel(proveedores,saveFileDialog.FileName);
+                        }
+                        catch (Exception er)
+                        {
+                            ShowAlert(er.Message,"Error");
+                        }
+                    }
+                }
+            });
+
             this.navbar1.AddTextFilter((s, e) =>
             {
                 Proveedor = null;
@@ -148,9 +193,11 @@ namespace AcProveedores
                 var row = this.tablaProveedores.Rows[e.RowIndex];
                 int id = (int)row.Cells["Id"].Value;
                 Proveedor = FindProveedor(id).Result;
+                row.Selected = true;
                 LoadForm();
             }
         }
+
 
         public async Task<Proveedor> FindProveedor(int id) => await this._repo.Get(id);
         private void ShowAlert(string text, string caption = "") => MessageBox.Show(text, caption);

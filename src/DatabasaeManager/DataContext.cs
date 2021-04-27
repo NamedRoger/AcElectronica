@@ -11,6 +11,8 @@ namespace DatabasaeManager
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Aplicacion> Aplicaciones { get; set; }
         public DbSet<Proveedor> Proveedores { get; set; }
+        public DbSet<CategoriaMenu> CategoriaMenus { get; set; }
+        public DbSet<CategoriaOpcion> CategoriaOpcions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -30,6 +30,8 @@
         {
             this.navbar1 = new LoginLib.Navbar();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtPaqueteria = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtNotas = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -95,8 +97,6 @@
             this.label30 = new System.Windows.Forms.Label();
             this.txtBanco3 = new System.Windows.Forms.TextBox();
             this.tablaProveedores = new System.Windows.Forms.DataGridView();
-            this.txtPaqueteria = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabBancos.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -168,6 +168,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(959, 467);
             this.panel1.TabIndex = 1;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(472, 276);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(63, 15);
+            this.label31.TabIndex = 50;
+            this.label31.Text = "Paqueteria";
+            // 
+            // txtPaqueteria
+            // 
+            this.txtPaqueteria.Enabled = false;
+            this.txtPaqueteria.Location = new System.Drawing.Point(536, 273);
+            this.txtPaqueteria.Name = "txtPaqueteria";
+            this.txtPaqueteria.Size = new System.Drawing.Size(134, 23);
+            this.txtPaqueteria.TabIndex = 49;
             // 
             // label21
             // 
@@ -759,26 +776,9 @@
             this.tablaProveedores.Name = "tablaProveedores";
             this.tablaProveedores.ReadOnly = true;
             this.tablaProveedores.RowTemplate.Height = 25;
-            this.tablaProveedores.Size = new System.Drawing.Size(955, 172);
+            this.tablaProveedores.Size = new System.Drawing.Size(955, 157);
             this.tablaProveedores.TabIndex = 2;
             this.tablaProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaProveedores_CellClick);
-            // 
-            // txtPaqueteria
-            // 
-            this.txtPaqueteria.Enabled = false;
-            this.txtPaqueteria.Location = new System.Drawing.Point(536, 273);
-            this.txtPaqueteria.Name = "txtPaqueteria";
-            this.txtPaqueteria.Size = new System.Drawing.Size(134, 23);
-            this.txtPaqueteria.TabIndex = 49;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(472, 276);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(63, 15);
-            this.label31.TabIndex = 50;
-            this.label31.Text = "Paqueteria";
             // 
             // Proveedores
             // 
@@ -788,7 +788,7 @@
             this.Controls.Add(this.tablaProveedores);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.navbar1);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "Proveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proveedores";

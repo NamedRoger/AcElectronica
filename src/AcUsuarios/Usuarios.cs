@@ -72,6 +72,34 @@ namespace AcUsuarios
               
             });
 
+            this.navbar1.AddExcelExport((s, e) => {
+                using (SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = "Excel|*.xlsx" })
+                {
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            var usuarios = _repo.GetAll().Result.Select(p => new Usuario
+                            {
+                               Username = p.Username,
+                               Celular = p.Celular,
+                               Curp = p.Curp,
+                               FechaAlta = p.FechaAlta,
+                               FechaNacimiento = p.FechaNacimiento,
+                               Nss = p.Nss,
+                               NumeroInfonavit = p.NumeroInfonavit
+
+                            }).ToList();
+                            Exportar.Excel(usuarios, saveFileDialog.FileName);
+                        }
+                        catch (Exception er)
+                        {
+                            ShowAlert(er.Message, "Error");
+                        }
+                    }
+                }
+            });
+
             navbar1.AddTextFilter((s,e) => {
                 SelectedUsuario = null;
                 ResetForm();
@@ -103,6 +131,7 @@ namespace AcUsuarios
                 var row = this.tablaUsuarios.Rows[e.RowIndex];
                 int idUser = (int)row.Cells["Id"].Value;
                 SelectedUsuario = FindUser(idUser).Result;
+                row.Selected = true;
                 LoadForm().Wait();
             }
         }

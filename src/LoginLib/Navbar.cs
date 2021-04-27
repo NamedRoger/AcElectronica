@@ -25,6 +25,11 @@ namespace LoginLib
             this.btnBorrar.Click += eventHandler;
         }
 
+        public void AddExcelExport(EventHandler eventHandler)
+        {
+            this.exportar.Click += eventHandler;
+        }
+
         public string GetFilterText()
         {
             return this.txtBuscar.Text;

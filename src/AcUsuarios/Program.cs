@@ -1,5 +1,6 @@
     using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,16 +23,35 @@ namespace AcUsuarios
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            
-            var services = new ServiceCollection();
-            ConfigureServices(services);
+            Process[] processes = Process.GetProcessesByName(Process.GetCurrentProcess().ProcessName);
+            bool isOpenProcess = false;
+            IntPtr frameworkHandle;
+            if (processes.Length > 1)
+            {
+                foreach (var process in processes)
+                {
+                    frameworkHandle = process.MainWindowHandle;
+                    if (frameworkHandle != IntPtr.Zero)
+                    {
+                        isOpenProcess = true;
+                    }
+                }
+            }
 
-            using ServiceProvider serviceProvider = services.BuildServiceProvider();
-            FormUsuario formUsuario = serviceProvider.GetRequiredService<FormUsuario>();
-            Usuarios usuarios = serviceProvider.GetRequiredService<Usuarios>();
-            
-            UserMediator mediator = new UserMediator(formUsuario, usuarios);
-            Application.Run(usuarios);
+            if (!isOpenProcess)
+            {
+                var services = new ServiceCollection();
+                ConfigureServices(services);
+
+                using ServiceProvider serviceProvider = services.BuildServiceProvider();
+                FormUsuario formUsuario = serviceProvider.GetRequiredService<FormUsuario>();
+                Usuarios usuarios = serviceProvider.GetRequiredService<Usuarios>();
+
+                UserMediator mediator = new UserMediator(formUsuario, usuarios);
+                Application.Run(usuarios);
+            }
+
+           
         }
 
         static void ConfigureServices(ServiceCollection services)
