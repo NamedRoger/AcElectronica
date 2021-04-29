@@ -44,6 +44,7 @@ namespace DatabasaeManager.Entidades
         public string EmpresaCp { get; set; }
 
         public decimal DiasCredito { get; set; }
+        public decimal LimiteCredito { get; set; }
 
         public int IdCategoria { get; set; }
         public CategoriaOpcion Categoria { get; set; }

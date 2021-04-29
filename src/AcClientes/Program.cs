@@ -1,3 +1,5 @@
+using DatabasaeManager;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -36,8 +38,27 @@ namespace AcClientes
 
             if (!isOpenProcess)
             {
-                Application.Run(new Clientes());
+                var services = new ServiceCollection();
+                CongifugreServices(services);
+
+                using ServiceProvider serviceProvider = services.BuildServiceProvider();
+                Clientes clientes = serviceProvider.GetRequiredService<Clientes>();
+                FormularioCliente formularioCliente = serviceProvider.GetRequiredService<FormularioCliente>();
+
+                ClienteMediator clienteMediator = new ClienteMediator(formularioCliente,clientes);
+
+                
+
+                Application.Run(clientes);
             }
+        }
+
+        static void CongifugreServices(ServiceCollection services)
+        {
+            services.AddDbContext<DataContext>();
+            services.AddScoped<FormularioCliente>();
+            services.AddScoped<Clientes>();
+            services.AddSingleton<IClienteRepo, ClienteRepo>();
         }
     }
 }

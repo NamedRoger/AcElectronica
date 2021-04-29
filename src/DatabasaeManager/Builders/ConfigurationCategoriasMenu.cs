@@ -12,8 +12,6 @@ namespace DatabasaeManager.Builders
         public void Configure(EntityTypeBuilder<CategoriaMenu> builder)
         {
             builder.HasKey(c => c.IdCategoriaMenu);
-            builder.HasMany(c => c.CategoriaOpcions)
-                .WithOne(cp => cp.CategoriaMenu);
 
         }
     }

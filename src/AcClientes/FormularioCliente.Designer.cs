@@ -30,8 +30,13 @@ namespace AcClientes
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.dateFechaAlta = new System.Windows.Forms.DateTimePicker();
+            this.txtId = new System.Windows.Forms.NumericUpDown();
+            this.txtETel = new System.Windows.Forms.TextBox();
+            this.txtECel = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtEEmail = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.txtDiasCredito = new System.Windows.Forms.NumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
@@ -86,14 +91,24 @@ namespace AcClientes
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtClaveRegistro = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiasCredito)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label28);
-            this.panel1.Controls.Add(this.dateFechaAlta);
+            this.panel1.Controls.Add(this.txtId);
+            this.panel1.Controls.Add(this.txtETel);
+            this.panel1.Controls.Add(this.txtECel);
+            this.panel1.Controls.Add(this.label30);
+            this.panel1.Controls.Add(this.label32);
+            this.panel1.Controls.Add(this.txtEEmail);
+            this.panel1.Controls.Add(this.label29);
             this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.txtDiasCredito);
             this.panel1.Controls.Add(this.label26);
@@ -151,30 +166,69 @@ namespace AcClientes
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1255, 452);
+            this.panel1.Size = new System.Drawing.Size(1255, 482);
             this.panel1.TabIndex = 3;
             // 
-            // label28
+            // txtId
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(284, 395);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(62, 15);
-            this.label28.TabIndex = 65;
-            this.label28.Text = "Fecha Alta";
+            this.txtId.Location = new System.Drawing.Point(846, 7);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(120, 23);
+            this.txtId.TabIndex = 74;
+            this.txtId.Visible = false;
             // 
-            // dateFechaAlta
+            // txtETel
             // 
-            this.dateFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateFechaAlta.Location = new System.Drawing.Point(352, 389);
-            this.dateFechaAlta.Name = "dateFechaAlta";
-            this.dateFechaAlta.Size = new System.Drawing.Size(115, 23);
-            this.dateFechaAlta.TabIndex = 64;
+            this.txtETel.Location = new System.Drawing.Point(583, 204);
+            this.txtETel.Name = "txtETel";
+            this.txtETel.Size = new System.Drawing.Size(127, 23);
+            this.txtETel.TabIndex = 73;
+            // 
+            // txtECel
+            // 
+            this.txtECel.Location = new System.Drawing.Point(794, 203);
+            this.txtECel.Name = "txtECel";
+            this.txtECel.Size = new System.Drawing.Size(134, 23);
+            this.txtECel.TabIndex = 72;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(716, 210);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(72, 15);
+            this.label30.TabIndex = 71;
+            this.label30.Text = "Empresa Cel";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(474, 206);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(103, 15);
+            this.label32.TabIndex = 70;
+            this.label32.Text = " Empresa Telefono";
+            // 
+            // txtEEmail
+            // 
+            this.txtEEmail.Location = new System.Drawing.Point(145, 203);
+            this.txtEEmail.Name = "txtEEmail";
+            this.txtEEmail.Size = new System.Drawing.Size(322, 23);
+            this.txtEEmail.TabIndex = 69;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(12, 206);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(84, 15);
+            this.label29.TabIndex = 67;
+            this.label29.Text = "Email Empresa";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(974, 363);
+            this.label27.Location = new System.Drawing.Point(982, 391);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(87, 15);
             this.label27.TabIndex = 63;
@@ -182,7 +236,7 @@ namespace AcClientes
             // 
             // txtDiasCredito
             // 
-            this.txtDiasCredito.Location = new System.Drawing.Point(906, 360);
+            this.txtDiasCredito.Location = new System.Drawing.Point(914, 388);
             this.txtDiasCredito.Name = "txtDiasCredito";
             this.txtDiasCredito.Size = new System.Drawing.Size(62, 23);
             this.txtDiasCredito.TabIndex = 62;
@@ -190,7 +244,7 @@ namespace AcClientes
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(815, 363);
+            this.label26.Location = new System.Drawing.Point(823, 391);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(85, 15);
             this.label26.TabIndex = 60;
@@ -199,7 +253,7 @@ namespace AcClientes
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(586, 363);
+            this.label5.Location = new System.Drawing.Point(594, 391);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 15);
             this.label5.TabIndex = 59;
@@ -207,7 +261,7 @@ namespace AcClientes
             // 
             // txtLimiteCredito
             // 
-            this.txtLimiteCredito.Location = new System.Drawing.Point(692, 360);
+            this.txtLimiteCredito.Location = new System.Drawing.Point(700, 388);
             this.txtLimiteCredito.Name = "txtLimiteCredito";
             this.txtLimiteCredito.Size = new System.Drawing.Size(117, 23);
             this.txtLimiteCredito.TabIndex = 58;
@@ -215,7 +269,7 @@ namespace AcClientes
             // cbPrecio
             // 
             this.cbPrecio.FormattingEnabled = true;
-            this.cbPrecio.Location = new System.Drawing.Point(1067, 359);
+            this.cbPrecio.Location = new System.Drawing.Point(1075, 388);
             this.cbPrecio.Name = "cbPrecio";
             this.cbPrecio.Size = new System.Drawing.Size(113, 23);
             this.cbPrecio.TabIndex = 57;
@@ -249,7 +303,7 @@ namespace AcClientes
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(9, 363);
+            this.label24.Location = new System.Drawing.Point(17, 391);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(108, 15);
             this.label24.TabIndex = 53;
@@ -258,7 +312,7 @@ namespace AcClientes
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(8, 392);
+            this.label31.Location = new System.Drawing.Point(16, 420);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(63, 15);
             this.label31.TabIndex = 50;
@@ -266,14 +320,14 @@ namespace AcClientes
             // 
             // txtClaveInter
             // 
-            this.txtClaveInter.Location = new System.Drawing.Point(145, 360);
+            this.txtClaveInter.Location = new System.Drawing.Point(153, 388);
             this.txtClaveInter.Name = "txtClaveInter";
             this.txtClaveInter.Size = new System.Drawing.Size(435, 23);
             this.txtClaveInter.TabIndex = 52;
             // 
             // txtPaqueteria
             // 
-            this.txtPaqueteria.Location = new System.Drawing.Point(144, 389);
+            this.txtPaqueteria.Location = new System.Drawing.Point(152, 417);
             this.txtPaqueteria.Name = "txtPaqueteria";
             this.txtPaqueteria.Size = new System.Drawing.Size(134, 23);
             this.txtPaqueteria.TabIndex = 49;
@@ -281,7 +335,7 @@ namespace AcClientes
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(285, 334);
+            this.label23.Location = new System.Drawing.Point(293, 362);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(93, 15);
             this.label23.TabIndex = 51;
@@ -290,7 +344,7 @@ namespace AcClientes
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(9, 264);
+            this.label21.Location = new System.Drawing.Point(10, 297);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(38, 15);
             this.label21.TabIndex = 48;
@@ -298,14 +352,14 @@ namespace AcClientes
             // 
             // txtCuentaBancaria
             // 
-            this.txtCuentaBancaria.Location = new System.Drawing.Point(383, 331);
+            this.txtCuentaBancaria.Location = new System.Drawing.Point(391, 359);
             this.txtCuentaBancaria.Name = "txtCuentaBancaria";
             this.txtCuentaBancaria.Size = new System.Drawing.Size(322, 23);
             this.txtCuentaBancaria.TabIndex = 50;
             // 
             // txtNotas
             // 
-            this.txtNotas.Location = new System.Drawing.Point(144, 261);
+            this.txtNotas.Location = new System.Drawing.Point(145, 294);
             this.txtNotas.Multiline = true;
             this.txtNotas.Name = "txtNotas";
             this.txtNotas.Size = new System.Drawing.Size(805, 36);
@@ -314,7 +368,7 @@ namespace AcClientes
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(9, 334);
+            this.label22.Location = new System.Drawing.Point(17, 362);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(40, 15);
             this.label22.TabIndex = 49;
@@ -331,7 +385,7 @@ namespace AcClientes
             // 
             // txtBanco
             // 
-            this.txtBanco.Location = new System.Drawing.Point(144, 331);
+            this.txtBanco.Location = new System.Drawing.Point(152, 359);
             this.txtBanco.Name = "txtBanco";
             this.txtBanco.Size = new System.Drawing.Size(134, 23);
             this.txtBanco.TabIndex = 5;
@@ -490,7 +544,7 @@ namespace AcClientes
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(285, 235);
+            this.label10.Location = new System.Drawing.Point(286, 268);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(70, 15);
             this.label10.TabIndex = 19;
@@ -498,7 +552,7 @@ namespace AcClientes
             // 
             // txtECp
             // 
-            this.txtECp.Location = new System.Drawing.Point(391, 232);
+            this.txtECp.Location = new System.Drawing.Point(392, 265);
             this.txtECp.Name = "txtECp";
             this.txtECp.Size = new System.Drawing.Size(105, 23);
             this.txtECp.TabIndex = 18;
@@ -506,7 +560,7 @@ namespace AcClientes
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 235);
+            this.label9.Location = new System.Drawing.Point(10, 268);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 15);
             this.label9.TabIndex = 17;
@@ -514,7 +568,7 @@ namespace AcClientes
             // 
             // txtEPais
             // 
-            this.txtEPais.Location = new System.Drawing.Point(144, 232);
+            this.txtEPais.Location = new System.Drawing.Point(145, 265);
             this.txtEPais.Name = "txtEPais";
             this.txtEPais.Size = new System.Drawing.Size(134, 23);
             this.txtEPais.TabIndex = 16;
@@ -522,7 +576,7 @@ namespace AcClientes
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(983, 206);
+            this.label8.Location = new System.Drawing.Point(984, 239);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 15);
             this.label8.TabIndex = 15;
@@ -530,7 +584,7 @@ namespace AcClientes
             // 
             // txtEEstado
             // 
-            this.txtEEstado.Location = new System.Drawing.Point(1077, 203);
+            this.txtEEstado.Location = new System.Drawing.Point(1080, 236);
             this.txtEEstado.Name = "txtEEstado";
             this.txtEEstado.Size = new System.Drawing.Size(134, 23);
             this.txtEEstado.TabIndex = 14;
@@ -538,7 +592,7 @@ namespace AcClientes
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(744, 206);
+            this.label7.Location = new System.Drawing.Point(745, 239);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 15);
             this.label7.TabIndex = 13;
@@ -546,16 +600,15 @@ namespace AcClientes
             // 
             // txtECiudad
             // 
-            this.txtECiudad.Location = new System.Drawing.Point(843, 203);
+            this.txtECiudad.Location = new System.Drawing.Point(846, 239);
             this.txtECiudad.Name = "txtECiudad";
             this.txtECiudad.Size = new System.Drawing.Size(134, 23);
             this.txtECiudad.TabIndex = 12;
-            this.txtECiudad.TextChanged += new System.EventHandler(this.txtECiudad_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 206);
+            this.label6.Location = new System.Drawing.Point(9, 239);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 15);
             this.label6.TabIndex = 11;
@@ -563,7 +616,7 @@ namespace AcClientes
             // 
             // txtEDomicilio
             // 
-            this.txtEDomicilio.Location = new System.Drawing.Point(145, 203);
+            this.txtEDomicilio.Location = new System.Drawing.Point(146, 236);
             this.txtEDomicilio.Name = "txtEDomicilio";
             this.txtEDomicilio.Size = new System.Drawing.Size(593, 23);
             this.txtEDomicilio.TabIndex = 10;
@@ -609,17 +662,55 @@ namespace AcClientes
             this.txtClaveRegistro.Size = new System.Drawing.Size(100, 23);
             this.txtClaveRegistro.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnCancelar);
+            this.panel2.Controls.Add(this.btnGuardar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 446);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1255, 36);
+            this.panel2.TabIndex = 4;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCancelar.Location = new System.Drawing.Point(586, 5);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGuardar.Location = new System.Drawing.Point(360, 6);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // FormularioCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1255, 452);
+            this.ClientSize = new System.Drawing.Size(1255, 482);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "FormularioCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormularioCliente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormularioCliente_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiasCredito)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -627,8 +718,12 @@ namespace AcClientes
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.DateTimePicker dateFechaAlta;
+        private System.Windows.Forms.TextBox txtETel;
+        private System.Windows.Forms.TextBox txtECel;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox txtEEmail;
+        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.NumericUpDown txtDiasCredito;
         private System.Windows.Forms.Label label26;
@@ -683,5 +778,11 @@ namespace AcClientes
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtClaveRegistro;
+        private System.Windows.Forms.NumericUpDown txtId;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Guardar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
